@@ -62,6 +62,7 @@ AD9954::AD9954(byte ssPin, byte resetPin, byte updatePin, byte ps0, byte ps1, by
 
 // initialize(refClk) - initializes DDS with reference clock frequency refClk
 void AD9954::initialize(unsigned long refClk){
+    Serial.println("aaa");
     _refIn = refClk;
     _refClk = refClk;
     AD9954::reset();
