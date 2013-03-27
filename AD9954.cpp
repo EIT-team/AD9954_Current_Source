@@ -62,10 +62,19 @@ AD9954::AD9954(byte ssPin, byte resetPin, byte updatePin, byte ps0, byte ps1, by
 
 // initialize(refClk) - initializes DDS with reference clock frequency refClk
 void AD9954::initialize(unsigned long refClk){
-    Serial.println("aaa");
     _refIn = refClk;
     _refClk = refClk;
+
     AD9954::reset();
+
+    byte registerInfo[] = {0x00, 4};
+    byte data[] = {0x00, 0x00, 0x60, 0x00};
+    AD9954::writeRegister(registerInfo, data);
+
+
+//    byte registerInfo[] = {0x01, 3};
+ //   byte data[] = {0x18, 0x08, 0x00};
+  //  AD9954::writeRegister(registerInfo, data);
      
 }
 
@@ -91,14 +100,14 @@ void AD9954::initialize(unsigned long refClk, byte clkMult){
     }else{
         (multValue <<= 1)++;
         //multValue = (multValue << 1) + 1;
+
+        multValue <<= 2;
+        //multValue = multValue << 2;
+
+        data[2] = lowByte(multValue);
+
+        AD9954::writeRegister(registerInfo, data);
     }
-
-    multValue <<= 2;
-    //multValue = multValue << 2;
-
-    data[2] = lowByte(multValue);
-
-    AD9954::writeRegister(registerInfo, data);
 }
         
 
