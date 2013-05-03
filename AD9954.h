@@ -53,6 +53,11 @@ class AD9954
         // Sets frequency tuning word
         void setFTW(unsigned long);
 
+        // places DDS in linear sweep mode
+        void linearSweep(unsigned long, unsigned long, unsigned long, byte, unsigned long, byte);
+
+
+
         // DDS frequency resolution
         const static double RESOLUTION = 4294967296; // sets resolution to 2^32 = 32 bits
 

@@ -68,14 +68,9 @@ void AD9954::initialize(unsigned long refClk){
     AD9954::reset();
 
     byte registerInfo[] = {0x00, 4};
-    byte data[] = {0x00, 0x00, 0x60, 0x00};
+    byte data[] = {0x00, 0x00, 0x00, 0x00};
     AD9954::writeRegister(registerInfo, data);
 
-
-//    byte registerInfo[] = {0x01, 3};
- //   byte data[] = {0x18, 0x08, 0x00};
-  //  AD9954::writeRegister(registerInfo, data);
-     
 }
 
 // initialize(refClk, clkMult) -- initializes DDS with input refClk, and activates the
@@ -91,7 +86,7 @@ void AD9954::initialize(unsigned long refClk, byte clkMult){
     byte multValue = clkMult;
 
     byte registerInfo[] = {0x01, 3};
-    byte data[] = {0x00, 0x00, 0x00};
+    byte data[] = {0x18, 0x00, 0x00};
 
     // writes value for clock multiplier
     if (_refClk < 25000000){ 
@@ -172,6 +167,63 @@ void AD9954::setFTW(unsigned long ftw){
     AD9954::update();
 
 }
+
+// Function linearSweep -- places DDS in linear sweep mode.
+//      Behavior is determined by two frequency tuning words, freq0 and freq1 (freq0 < freq1).
+//      The PS0 pin HIGH will ramp towards freq1, PS0 LOW will ramp towards freq0.
+//      The rate of the ramp is dictated by pos/negDF (positive/negative DeltaFreq), and pos/negRR (positive/negative RampRate).
+//      
+//      freq0: lower frequency bound (Hz)
+//      freq1: upper frequency bound (Hz)
+//      posDF: delta frequency for positive ramp (Hz)
+//      negDF: delta frequency for negative ramp (Hz)
+//      posRR: number between 0 and 255, indicating number of SYNC_CLK cycles spent at each
+//              frequency value in the ramp. SYNC_CLK operates at 1/4 of the SYSCLK clock value. Typically SYNC_CLK = 100MHz.
+//              Thus, the true "ramp rate" is, eg, posDF/(posRR*10 ns)
+//      negRR: same as above, but for negative ramp.
+//      
+//      As a general rule, round up (not down) in calculating the delta frequency steps.
+void AD9954::linearSweep(unsigned long freq0, unsigned long freq1, unsigned long posDF, byte posRR, unsigned long negDF, byte negRR){
+
+    // calculate
+    unsigned long ftw0 = freq0*RESOLUTION / _refClk;
+    unsigned long ftw1 = freq1*RESOLUTION / _refClk;
+    unsigned long posDFW = posDF*RESOLUTION / _refClk;
+    unsigned long negDFW = negDF*RESOLUTION / _refClk;
+
+Serial.println(posDFW);
+Serial.println(negDFW);
+Serial.println(posRR);
+Serial.println(negRR);
+
+
+    // construct register values
+    byte CFR1[] = { 0x00, 0x20, 0x00, 0x00 };
+    byte CFR1Info[] = {0x00, 4};
+
+    byte FTW0[] = {lowByte(ftw0 >> 24), lowByte(ftw0 >> 16), lowByte(ftw0 >> 8), lowByte(ftw0) };
+    byte FTW0Info[] = {0x04, 4};
+
+    byte FTW1[] = {lowByte(ftw1 >> 24), lowByte(ftw1 >> 16), lowByte(ftw1 >> 8), lowByte(ftw1) };
+    byte FTW1Info[] = {0x06, 4};
+
+    byte NLSCW[] = { negRR, lowByte(negDFW >> 24), lowByte(negDFW >> 16), lowByte(negDFW >> 8), lowByte(negDFW) };
+    byte NLSCWInfo[] = {0x07, 5};
+
+    byte PLSCW[] = { posRR, lowByte(posDFW >> 24), lowByte(posDFW >> 16), lowByte(posDFW >> 8), lowByte(posDFW) };
+    byte PLSCWInfo[] = {0x08, 5};
+    
+    AD9954::writeRegister(CFR1Info, CFR1);
+    AD9954::writeRegister(FTW0Info, FTW0);
+    AD9954::writeRegister(FTW1Info, FTW1);
+    AD9954::writeRegister(NLSCWInfo, NLSCW);
+    AD9954::writeRegister(PLSCWInfo, PLSCW);
+
+    AD9954::update();
+
+
+}
+
 
 
 
