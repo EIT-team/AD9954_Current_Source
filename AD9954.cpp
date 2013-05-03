@@ -191,11 +191,6 @@ void AD9954::linearSweep(unsigned long freq0, unsigned long freq1, unsigned long
     unsigned long posDFW = posDF*RESOLUTION / _refClk;
     unsigned long negDFW = negDF*RESOLUTION / _refClk;
 
-Serial.println(posDFW);
-Serial.println(negDFW);
-Serial.println(posRR);
-Serial.println(negRR);
-
 
     // construct register values
     byte CFR1[] = { 0x00, 0x20, 0x00, 0x00 };
