@@ -133,10 +133,15 @@ void AD9954::setFreq(unsigned long freq){
     byte ftw[] = { lowByte(_ftw >> 24), lowByte(_ftw >> 16), lowByte(_ftw >> 8), lowByte(_ftw)};
     // register info -- writing four bytes to register 0x04, 
     byte registerInfo[] = {0x04, 4};
-
-    // actually writes to register
-    AD9954::writeRegister(registerInfo, ftw);
-    // issues update command
+    
+	byte CFR1[] = { 0x00, 0x00, 0x00, 0x00 };
+    byte CFR1Info[] = {0x00, 4};
+    
+	// actually writes to register
+    AD9954::writeRegister(CFR1Info, CFR1);
+	AD9954::writeRegister(registerInfo, ftw);
+    
+	// issues update command
     AD9954::update();
 }
 
@@ -163,6 +168,11 @@ void AD9954::setFTW(unsigned long ftw){
     // register info -- writing four bytes to register 0x04, 
     byte registerInfo[] = {0x04, 4};
 
+	
+    byte CFR1[] = { 0x00, 0x00, 0x00, 0x00 };
+    byte CFR1Info[] = {0x00, 4};
+	
+    AD9954::writeRegister(CFR1Info, CFR1);
     AD9954::writeRegister(registerInfo, data);
     AD9954::update();
 
