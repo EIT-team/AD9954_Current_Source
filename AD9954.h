@@ -59,7 +59,7 @@ class AD9954
 
 
         // DDS frequency resolution
-        const static double RESOLUTION = 4294967296; // sets resolution to 2^32 = 32 bits
+         static constexpr double RESOLUTION = 4294967296; // sets resolution to 2^32 = 32 bits. Using type double to avoid confusion with integer division...
 
 
     private:
