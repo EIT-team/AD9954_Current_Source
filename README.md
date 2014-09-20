@@ -14,7 +14,7 @@ You'll first need to include the SPI library, as well as this one. Then, you can
 
 In your `void setup(){ ... }` function, you'll need to first start the SPI bus:
 
-    SPI.begin()
+    SPI.begin();
     SPI.setClockDivider(4);
     SPI.setDataMode(SPI_MODE0);
     delay(500); // let things get set up...
