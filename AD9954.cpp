@@ -29,6 +29,7 @@
 // Constructor function; initializes communication pinouts
 AD9954::AD9954(byte ssPin, byte resetPin, byte updatePin, byte ps0, byte ps1, byte osk)
 {
+    RESOLUTION  = 4294967296.0;
     _ssPin = ssPin;
     _resetPin = resetPin;
     _updatePin = updatePin;

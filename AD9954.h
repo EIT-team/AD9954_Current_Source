@@ -58,8 +58,6 @@ class AD9954
 
 
 
-        // DDS frequency resolution
-         static constexpr double RESOLUTION = 4294967296; // sets resolution to 2^32 = 32 bits. Using type double to avoid confusion with integer division...
 
 
     private:
@@ -76,6 +74,8 @@ class AD9954
         void writeRegister(byte[2], byte[1024]);
 
 
+        // DDS frequency resolution
+         double RESOLUTION;// = 4294967296; // sets resolution to 2^32 = 32 bits. Using type double to avoid confusion with integer division...
 
 
 
