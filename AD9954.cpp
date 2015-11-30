@@ -226,10 +226,10 @@ void AD9954::linearSweep(unsigned long freq0, unsigned long freq1, unsigned long
     AD9954::writeRegister(PLSCWInfo, PLSCW);
 
     AD9954::update();
+	digitalWrite(_ps0, HIGH);
 
 
 }
-
 
 
 
