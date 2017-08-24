@@ -14,13 +14,24 @@
 #define CFR1_READ 0x80
 #define CFR2_WRITE 0x01
 #define CFR2_READ 0x81
+#define FREQ_WRITE 0x04
+
+#define CLOCK 10e6
+#define MAX_FREQ 4294967296
+
+void resetAD9954() {
+  // Send a pulse on the reset pin
+  //Serial.println("Resetting AD9954");
+  digitalWrite(RESET_PIN, HIGH);
+  delay(1);
+  digitalWrite(RESET_PIN, LOW);
+}
 
 void setup() {
-  // put your setup code here, to run once:
+
   pinMode(SS_PIN, OUTPUT);
   pinMode(RESET_PIN, OUTPUT);
   pinMode(UPDATE_PIN, OUTPUT);
-
 
   digitalWrite(SS_PIN, LOW); // CS of AD9954 always active
   digitalWrite(RESET_PIN, LOW);
@@ -32,39 +43,63 @@ void setup() {
   SPI.setDataMode(SPI_MODE0);
 
   Serial.begin(115200);
+  Serial.setTimeout(10);
   resetAD9954();
 
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
-  //AD9954 DDS( SS_PIN, RESET_PIN, UPDATE_PIN, PS0, PS1, OSK);
-  long freq = 10000;
 
 
+
+  unsigned long freq;
+  unsigned long input_value;
 
   while (1) {
-    //Serial.println("Module");
-    //DDS.initialize(10000000, 0 );
-    //DDS.setFreq(10000);
-    //delay(3000);
 
+    String what_to_program = "";
 
-    //  Serial.println("test");
-    testWriteRead();
+    if (Serial.available()) {
 
+      // First part is the command name
+      // Get a string, ignoring case
+      what_to_program = Serial.readStringUntil(' ');
+      what_to_program.toLowerCase();
 
-    resetAD9954();
-    delay(1000);
-    Serial.println("single tone");
+      // Get an the frequency as an integer
+      input_value = Serial.parseInt(); // Get an int
 
-    singleTone(freq);
+      Serial.read();
+    }
 
-    while (1) {
+    if (what_to_program == "frequency") {
 
-      delay(3000);
+      resetAD9954();
+      freq = input_value;
+      Serial.print("Frequency set to ");
+      Serial.print(freq);
+      Serial.println("Hz");
+    }
+
+    if (what_to_program == "stim") {
+
+      if (input_value >= 1) {
+        if (freq > 0) {
+          Serial.println("Starting injection!");
+          singleTone(freq);
+          updateAD9954();
+        }
+
+        else {
+          printInvalidFrequency();
+        }
+      }
+
+      else {
+        Serial.println("Stopping injection");
+        resetAD9954();
+      }
     }
   }
 
@@ -72,79 +107,51 @@ void loop() {
 
 
 
-void testWriteRead() {
 
-  SPI.transfer(CFR1_WRITE);
+void singleTone(unsigned long freq) {
+  // Calculates frequency tuning word and sets registers
+  // An I/O Update (updateAD9954()) command needs to be issued after this to start the output
 
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  SPI.transfer(0x02);
-  SPI.transfer(0x00);
-  updateAD9954();
+  Serial.print("Setting frequency to "); Serial.print(freq); Serial.println("Hz");
+  // Calculate frequency word
+  unsigned long frequency_word = MAX_FREQ * freq / CLOCK;
 
-  SPI.transfer(CFR1_READ);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  SPI.transfer(CFR2_READ);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
-  SPI.transfer(0x00);
+  // Split word into 4 bytes
+  int num_bytes = 4;
+  byte b[4];
 
-}
-
-void singleTone(long freq) {
-  /*
-    // 1.
-    // Instruction byte
-    SPI.transfer(0x00);
-
-    //Data
-    SPI.transfer(0x00);
-    SPI.transfer(0x00);
-    SPI.transfer(0x00);
-    SPI.transfer(0x00);
+  b[3] = lowByte(frequency_word);
+  b[2] = lowByte(frequency_word >> 8);
+  b[1] = lowByte(frequency_word >> 16);
+  b[0] = lowByte(frequency_word >> 24);
 
 
-    //2
-    SPI.transfer(0x01);
+  // Access frequency word register
+  SPI.transfer(FREQ_WRITE);
 
-    SPI.transfer(0x00);
-    SPI.transfer(0x00);
-    SPI.transfer(0x00);
-    SPI.transfer(0x00);
-  */
+  // Transfer frequency word as bytes
+  for (int i = 0; i < num_bytes; i++) {
+    //Serial.println(b[i]);
+    SPI.transfer(b[i]);
 
-  //3
-  // Frequency word is (Freq_Hz / Clock) * 2^32
-  
-  SPI.transfer(0x04);
-
-  SPI.transfer(0x00);
-  SPI.transfer(0x20);
-  SPI.transfer(0xC4);
-  SPI.transfer(0x9B);
-  updateAD9954();
-
+  }
 
 }
 
 void updateAD9954() {
   // Send a pulse on the IO/Update pin to update frequency output
-  Serial.println("I/O Updating");
+  //Serial.println("I/O Updating");
   digitalWrite(UPDATE_PIN, HIGH);
   delay(1);
   digitalWrite(UPDATE_PIN, LOW);
 }
 
-void resetAD9954() {
-  // Send a pulse on the reset pin
-  Serial.println("Resetting AD9954");
-  digitalWrite(RESET_PIN, HIGH);
-  delay(1);
-  digitalWrite(RESET_PIN, LOW);
-}
 
+void printInvalidFrequency() {
+
+  Serial.println(" Invalid frequency specified.");
+  Serial.println(" Use command:");
+  Serial.println(" frequency xxx");
+  Serial.println(" To set frequency.");
+}
 
