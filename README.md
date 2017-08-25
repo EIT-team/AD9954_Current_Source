@@ -7,9 +7,9 @@ Sample MATLAB code for programming over Serial port included.
 
 Serial commands:
 
-__frequency xxxx__    frequency to program (Hz)
+  _frequency xxxx_      frequency to program (Hz)
 
-__stim 1__            Starts injection
-
-__stim 0__            Stops injection
+  _stim 1_              Starts injection
+  
+  _stim 0_              Stops injection
 
