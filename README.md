@@ -2,9 +2,9 @@
 
 Communication over a serial port to program Analog Devices AD9954 DDS chip.
 
-Arduino source code in AD9954_Source.
+Arduino source code in _/Program_AD9954_.
 
-Sample MATLAB code for programming over Serial port included.
+Sample MATLAB code for programming over Serial port in _sample_code.m_
 
 Serial commands:
 
