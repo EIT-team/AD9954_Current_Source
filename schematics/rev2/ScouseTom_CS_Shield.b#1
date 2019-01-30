@@ -3406,16 +3406,14 @@ design rules under a new name.</description>
 <wire x1="37.365" y1="34.29" x2="40.755" y2="37.68" width="0.254" layer="15"/>
 <wire x1="38.655" y1="10.58" x2="33.87" y2="10.58" width="0.254" layer="15"/>
 <wire x1="33.87" y1="10.58" x2="33.02" y2="11.43" width="0.254" layer="15"/>
-<wire x1="33.02" y1="11.43" x2="33.02" y2="20.32" width="0.254" layer="15"/>
-<wire x1="33.02" y1="20.32" x2="33.655" y2="20.955" width="0.254" layer="15"/>
-<wire x1="33.655" y1="20.955" x2="36.83" y2="20.955" width="0.254" layer="15"/>
-<wire x1="36.83" y1="20.955" x2="38.355" y2="22.48" width="0.254" layer="15"/>
 <wire x1="39.075" y1="10.16" x2="38.655" y2="10.58" width="0.254" layer="15"/>
 <contactref element="U$2" pad="5V0"/>
 <wire x1="39.075" y1="10.16" x2="39.075" y2="6.645" width="0.254" layer="15"/>
 <wire x1="39.075" y1="6.645" x2="40.005" y2="5.715" width="0.254" layer="15"/>
 <wire x1="40.005" y1="5.715" x2="50.292" y2="5.715" width="0.254" layer="15"/>
 <wire x1="50.292" y1="5.715" x2="51.943" y2="7.366" width="0.254" layer="15"/>
+<wire x1="38.355" y1="22.48" x2="33.02" y2="17.145" width="0.254" layer="15"/>
+<wire x1="33.02" y1="17.145" x2="33.02" y2="11.43" width="0.254" layer="15"/>
 </signal>
 <signal name="IND_EX_1">
 <contactref element="U8" pad="4"/>
@@ -4344,6 +4342,18 @@ design rules under a new name.</description>
 <wire x1="95.595" y1="21.59" x2="96.415" y2="20.77" width="0.254" layer="15"/>
 <wire x1="97.155" y1="27.94" x2="97.79" y2="28.575" width="0.254" layer="15"/>
 <wire x1="97.79" y1="28.575" x2="97.79" y2="42.545" width="0.254" layer="15"/>
+<polygon width="0.254" layer="15">
+<vertex x="79.375" y="59.69"/>
+<vertex x="112.395" y="59.69"/>
+<vertex x="112.395" y="3.81"/>
+<vertex x="77.47" y="3.81"/>
+<vertex x="77.47" y="27.94"/>
+<vertex x="82.55" y="27.94"/>
+<vertex x="82.55" y="37.465"/>
+<vertex x="77.47" y="37.465"/>
+<vertex x="77.47" y="52.705"/>
+<vertex x="79.375" y="52.705"/>
+</polygon>
 </signal>
 <signal name="VIN_NEG">
 <contactref element="C41" pad="2"/>
@@ -4370,6 +4380,18 @@ design rules under a new name.</description>
 <wire x1="90.805" y1="24.765" x2="90.805" y2="31.75" width="0.254" layer="16"/>
 <wire x1="97.155" y1="15.24" x2="94.615" y2="17.78" width="0.254" layer="16"/>
 <wire x1="94.615" y1="17.78" x2="94.615" y2="31.75" width="0.254" layer="16"/>
+<polygon width="0.254" layer="2">
+<vertex x="79.375" y="60.325"/>
+<vertex x="112.395" y="60.325"/>
+<vertex x="112.395" y="3.175"/>
+<vertex x="77.47" y="3.175"/>
+<vertex x="77.47" y="27.94"/>
+<vertex x="82.55" y="27.94"/>
+<vertex x="82.55" y="37.465"/>
+<vertex x="77.47" y="37.465"/>
+<vertex x="77.47" y="52.705"/>
+<vertex x="79.375" y="52.705"/>
+</polygon>
 </signal>
 <signal name="B+">
 <contactref element="R1_0.1%" pad="2"/>

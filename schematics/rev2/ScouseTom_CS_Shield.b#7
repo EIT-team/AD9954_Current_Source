@@ -2735,8 +2735,8 @@ design rules under a new name.</description>
 <element name="R_GAIN2_0.1%" library="adafruit" package="R0805" value="5k" x="121.485" y="39.515"/>
 <element name="R_GAIN3_0.1%" library="adafruit" package="R0805" value="10k" x="121.525" y="36.915"/>
 <element name="JP1" library="jumper" package="JP3Q" value="" x="127.485" y="39.485" rot="R270"/>
-<element name="DACOUT" library="testpad" package="P1-13" value="PTR1PAD1-13" x="104.605" y="55.395">
-<attribute name="TP_SIGNAL_NAME" value="" x="34.755" y="-133.835" size="1.778" layer="27" display="off"/>
+<element name="DACOUT" library="testpad" package="P1-13" value="PTR1PAD1-13" x="78.105" y="49.53">
+<attribute name="TP_SIGNAL_NAME" value="" x="8.255" y="-139.7" size="1.778" layer="27" display="off"/>
 </element>
 <element name="IOUT+" library="testpad" package="P1-13" value="PTR1PAD1-13" x="129.825" y="25.795" rot="R270">
 <attribute name="TP_SIGNAL_NAME" value="" x="-64.485" y="81.675" size="1.778" layer="27" rot="R270" display="off"/>
@@ -4261,8 +4261,10 @@ design rules under a new name.</description>
 <wire x1="92.58" y1="45.205" x2="92.015" y2="45.205" width="0.254" layer="1"/>
 <wire x1="95.168" y1="44.41" x2="95.168" y2="46.658" width="0.254" layer="1"/>
 <wire x1="95.168" y1="46.658" x2="96.08" y2="46.935" width="0.254" layer="1"/>
-<wire x1="96.08" y1="46.935" x2="89.365" y2="47.3" width="0.254" layer="1"/>
-<wire x1="89.365" y1="47.3" x2="104.605" y2="55.395" width="0.254" layer="1"/>
+<wire x1="78.105" y1="49.53" x2="80.645" y2="49.53" width="0.254" layer="1"/>
+<wire x1="80.645" y1="49.53" x2="81.28" y2="50.165" width="0.254" layer="1"/>
+<wire x1="81.28" y1="50.165" x2="92.85" y2="50.165" width="0.254" layer="1"/>
+<wire x1="92.85" y1="50.165" x2="96.08" y2="46.935" width="0.254" layer="1"/>
 </signal>
 <signal name="N$4">
 <contactref element="U1" pad="24"/>
@@ -4314,7 +4316,6 @@ design rules under a new name.</description>
 <wire x1="107.43" y1="44.755" x2="107.58" y2="44.905" width="0.254" layer="15"/>
 <wire x1="55.225" y1="12.89" x2="57.62" y2="15.285" width="0.254" layer="1"/>
 <wire x1="97.79" y1="21.3" x2="97.685" y2="21.405" width="0.254" layer="15"/>
-<wire x1="108.18" y1="44.905" x2="108.18" y2="44.855" width="0.254" layer="15"/>
 <wire x1="107.58" y1="44.905" x2="100.15" y2="44.905" width="0.254" layer="15"/>
 <wire x1="100.15" y1="44.905" x2="98.425" y2="43.18" width="0.254" layer="15"/>
 <wire x1="98.425" y1="43.18" x2="98.425" y2="28.575" width="0.254" layer="15"/>
@@ -4332,7 +4333,6 @@ design rules under a new name.</description>
 <wire x1="86.81" y1="10.345" x2="85.09" y2="12.065" width="0.254" layer="15"/>
 <wire x1="84.455" y1="30.48" x2="96.52" y2="30.48" width="0.254" layer="15"/>
 <wire x1="96.52" y1="30.48" x2="98.425" y2="28.575" width="0.254" layer="15"/>
-<wire x1="107.58" y1="44.905" x2="108.18" y2="44.905" width="0" layer="19" extent="1-15"/>
 </signal>
 <signal name="VIN_NEG">
 <contactref element="C41" pad="2"/>

@@ -41,8 +41,8 @@
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
-<layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="yes"/>
 <layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
@@ -3279,6 +3279,13 @@ design rules under a new name.</description>
 <wire x1="86.995" y1="26.05" x2="86.995" y2="16.365" width="0.254" layer="2"/>
 <wire x1="105.41" y1="24.765" x2="105.41" y2="18.27" width="0.254" layer="2"/>
 <wire x1="105.41" y1="18.27" x2="107.315" y2="16.365" width="0.254" layer="2"/>
+<polygon width="0.254" layer="2">
+<vertex x="72.39" y="3.81"/>
+<vertex x="72.39" y="59.69"/>
+<vertex x="68.58" y="59.69"/>
+<vertex x="40.005" y="59.69"/>
+<vertex x="40.005" y="3.81"/>
+</polygon>
 </signal>
 <signal name="IND_SWITCH">
 <contactref element="U7" pad="3"/>
@@ -4558,6 +4565,20 @@ design rules under a new name.</description>
 <contactref element="R1" pad="1"/>
 <wire x1="92.99" y1="26.2938" x2="94.7412" y2="26.2938" width="0.254" layer="1"/>
 <wire x1="94.7412" y1="26.2938" x2="96.115" y2="24.92" width="0.254" layer="1"/>
+</signal>
+<signal name="N$5">
+<polygon width="0.254" layer="2">
+<vertex x="79.375" y="59.055"/>
+<vertex x="112.395" y="59.055"/>
+<vertex x="112.395" y="5.08"/>
+<vertex x="77.47" y="5.08"/>
+<vertex x="77.47" y="27.94"/>
+<vertex x="82.55" y="27.94"/>
+<vertex x="82.55" y="37.465"/>
+<vertex x="77.47" y="37.465"/>
+<vertex x="77.47" y="52.705"/>
+<vertex x="79.375" y="52.705"/>
+</polygon>
 </signal>
 </signals>
 </board>

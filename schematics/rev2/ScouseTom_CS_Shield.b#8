@@ -2777,14 +2777,14 @@ design rules under a new name.</description>
 <element name="JP3" library="SwitchBoard" package="JST-2-SMD" value="" x="79.705" y="8.635" rot="R180"/>
 <element name="JP6" library="SwitchBoard" package="JST-2-SMD" value="" x="106.565" y="8.775" rot="R180"/>
 <element name="S3" library="switch" package="TL4XPO" value="TL42PO" x="92.815" y="10.345" rot="R270"/>
-<element name="VIN_POS" library="testpad" package="P1-13" value="PTR1PAD1-13" x="85.175" y="28.385" rot="R270">
-<attribute name="TP_SIGNAL_NAME" value="" x="75.015" y="89.345" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="VIN_POS" library="testpad" package="P1-13" value="PTR1PAD1-13" x="84.455" y="30.48" rot="R270">
+<attribute name="TP_SIGNAL_NAME" value="" x="74.295" y="91.44" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="VIN_NEG" library="testpad" package="P1-13" value="PTR1PAD1-13" x="85.36" y="32.25" rot="R270">
-<attribute name="TP_SIGNAL_NAME" value="" x="65.04" y="118.61" size="1.778" layer="27" rot="R270" display="off"/>
+<element name="VIN_NEG" library="testpad" package="P1-13" value="PTR1PAD1-13" x="84.455" y="33.02" rot="R270">
+<attribute name="TP_SIGNAL_NAME" value="" x="64.135" y="119.38" size="1.778" layer="27" rot="R270" display="off"/>
 </element>
-<element name="3V3" library="testpad" package="P1-13" value="PTR1PAD1-13" x="63.8" y="7.34" rot="R90">
-<attribute name="TP_SIGNAL_NAME" value="" x="79.04" y="-70.13" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="3V3" library="testpad" package="P1-13" value="PTR1PAD1-13" x="66.675" y="6.985" rot="R90">
+<attribute name="TP_SIGNAL_NAME" value="" x="81.915" y="-70.485" size="1.778" layer="27" rot="R90" display="off"/>
 </element>
 <element name="1.8VD" library="testpad" package="P1-13" value="PTR1PAD1-13" x="41.33" y="18.265" rot="R90">
 <attribute name="TP_SIGNAL_NAME" value="" x="66.73" y="-65.555" size="1.778" layer="27" rot="R90" display="off"/>
@@ -2792,8 +2792,8 @@ design rules under a new name.</description>
 <element name="1.8VA" library="testpad" package="P1-13" value="PTR1PAD1-13" x="72.255" y="17.67" rot="R180">
 <attribute name="TP_SIGNAL_NAME" value="" x="143.375" y="48.15" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="GND" library="testpad" package="P1-13" value="PTR1PAD1-13" x="68.835" y="7.205">
-<attribute name="TP_SIGNAL_NAME" value="" x="7.875" y="-23.275" size="1.778" layer="27" display="off"/>
+<element name="GND" library="testpad" package="P1-13" value="PTR1PAD1-13" x="69.215" y="6.985">
+<attribute name="TP_SIGNAL_NAME" value="" x="8.255" y="-23.495" size="1.778" layer="27" display="off"/>
 </element>
 <element name="CLK" library="testpad" package="P1-13" value="PTR1PAD1-13" x="70.99" y="42.26" rot="R90">
 <attribute name="TP_SIGNAL_NAME" value="" x="106.55" y="-30.13" size="1.778" layer="27" rot="R90" display="off"/>
@@ -3267,13 +3267,12 @@ design rules under a new name.</description>
 <wire x1="88.265" y1="16.365" x2="79.465" y2="16.365" width="0.254" layer="2"/>
 <wire x1="79.465" y1="16.365" x2="78.765" y2="15.665" width="0.254" layer="2"/>
 <wire x1="58.735" y1="13.485" x2="69.215" y2="13.485" width="0.254" layer="2"/>
+<wire x1="69.215" y1="13.485" x2="76.585" y2="13.485" width="0.254" layer="2"/>
 <wire x1="76.585" y1="13.485" x2="78.765" y2="15.665" width="0.254" layer="2"/>
 <wire x1="57.935" y1="13.485" x2="58.735" y2="13.485" width="0.254" layer="2"/>
-<wire x1="68.835" y1="7.205" x2="68.835" y2="13.105" width="0.254" layer="2"/>
-<wire x1="68.835" y1="13.105" x2="69.215" y2="13.485" width="0.254" layer="2"/>
-<wire x1="76.585" y1="13.485" x2="69.215" y2="13.485" width="0.254" layer="2"/>
 <wire x1="88.285" y1="26.705" x2="88.285" y2="16.385" width="0.254" layer="2"/>
 <wire x1="88.285" y1="16.385" x2="88.265" y2="16.365" width="0.254" layer="2"/>
+<wire x1="69.215" y1="6.985" x2="69.215" y2="13.485" width="0.254" layer="2"/>
 <wire x1="110.72" y1="47.245" x2="124.205" y2="46.485" width="0" layer="19" extent="2-2"/>
 </signal>
 <signal name="IND_SWITCH">
@@ -3814,14 +3813,13 @@ design rules under a new name.</description>
 <wire x1="90.275" y1="12.885" x2="81.915" y2="12.885" width="0.254" layer="15"/>
 <wire x1="81.915" y1="12.885" x2="61.78" y2="12.885" width="0.254" layer="15"/>
 <wire x1="61.78" y1="12.885" x2="60.96" y2="12.065" width="0.254" layer="15"/>
-<wire x1="60.96" y1="12.065" x2="59.69" y2="12.065" width="0.254" layer="15"/>
-<wire x1="59.69" y1="12.065" x2="54.102" y2="12.065" width="0.254" layer="15"/>
+<wire x1="60.96" y1="12.065" x2="54.102" y2="12.065" width="0.254" layer="15"/>
 <wire x1="81.96" y1="48.905" x2="81.96" y2="38.805" width="0.254" layer="15"/>
 <wire x1="81.96" y1="38.805" x2="81.76" y2="38.605" width="0.254" layer="15"/>
 <wire x1="81.76" y1="38.605" x2="81.76" y2="13.04" width="0.254" layer="15"/>
 <wire x1="81.76" y1="13.04" x2="81.915" y2="12.885" width="0.254" layer="15"/>
-<wire x1="63.8" y1="7.34" x2="63.8" y2="7.955" width="0.254" layer="15"/>
-<wire x1="63.8" y1="7.955" x2="59.69" y2="12.065" width="0.254" layer="15"/>
+<wire x1="66.675" y1="6.985" x2="66.04" y2="6.985" width="0.254" layer="15"/>
+<wire x1="66.04" y1="6.985" x2="60.96" y2="12.065" width="0.254" layer="15"/>
 </signal>
 <signal name="1V8_ANALOG">
 <contactref element="U1" pad="6"/>
@@ -4319,7 +4317,8 @@ design rules under a new name.</description>
 <wire x1="108.18" y1="44.905" x2="108.18" y2="44.855" width="0.254" layer="15"/>
 <wire x1="107.58" y1="44.905" x2="100.15" y2="44.905" width="0.254" layer="15"/>
 <wire x1="100.15" y1="44.905" x2="98.425" y2="43.18" width="0.254" layer="15"/>
-<wire x1="98.425" y1="43.18" x2="98.425" y2="22.145" width="0.254" layer="15"/>
+<wire x1="98.425" y1="43.18" x2="98.425" y2="28.575" width="0.254" layer="15"/>
+<wire x1="98.425" y1="28.575" x2="98.425" y2="22.145" width="0.254" layer="15"/>
 <wire x1="98.425" y1="22.145" x2="97.685" y2="21.405" width="0.254" layer="15"/>
 <wire x1="90.275" y1="10.345" x2="90.99" y2="10.345" width="0.254" layer="15"/>
 <wire x1="90.99" y1="10.345" x2="92.71" y2="12.065" width="0.254" layer="15"/>
@@ -4331,8 +4330,9 @@ design rules under a new name.</description>
 <wire x1="63.5" y1="12.065" x2="85.09" y2="12.065" width="0.254" layer="15"/>
 <wire x1="90.275" y1="10.345" x2="86.81" y2="10.345" width="0.254" layer="15"/>
 <wire x1="86.81" y1="10.345" x2="85.09" y2="12.065" width="0.254" layer="15"/>
+<wire x1="84.455" y1="30.48" x2="96.52" y2="30.48" width="0.254" layer="15"/>
+<wire x1="96.52" y1="30.48" x2="98.425" y2="28.575" width="0.254" layer="15"/>
 <wire x1="107.58" y1="44.905" x2="108.18" y2="44.905" width="0" layer="19" extent="1-15"/>
-<wire x1="85.175" y1="28.385" x2="94.26" y2="22.0012" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VIN_NEG">
 <contactref element="C41" pad="2"/>
@@ -4355,7 +4355,8 @@ design rules under a new name.</description>
 <wire x1="97.155" y1="15.24" x2="95.885" y2="16.51" width="0.254" layer="16"/>
 <wire x1="95.885" y1="16.51" x2="95.885" y2="32.385" width="0.254" layer="16"/>
 <wire x1="95.885" y1="32.385" x2="93.98" y2="34.29" width="0.254" layer="16"/>
-<wire x1="93.345" y1="34.925" x2="85.36" y2="32.25" width="0" layer="19" extent="1-1"/>
+<wire x1="84.455" y1="33.02" x2="92.71" y2="33.02" width="0.254" layer="16"/>
+<wire x1="92.71" y1="33.02" x2="93.98" y2="34.29" width="0.254" layer="16"/>
 </signal>
 <signal name="B+">
 <contactref element="R1_0.1%" pad="2"/>
