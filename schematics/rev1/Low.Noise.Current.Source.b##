@@ -8,8 +8,8 @@
 </settings>
 <grid distance="0.2" unitdist="mm" unit="mm" style="lines" multiple="1" display="no" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
-<layer number="2" name="VDD" color="3" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="2" name="VDD" color="3" fill="1" visible="no" active="yes"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
 <layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
@@ -22,8 +22,8 @@
 <layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="GND" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="15" name="GND" color="14" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -34,7 +34,7 @@
 <layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
@@ -44,7 +44,7 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="yes"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="yes"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="yes"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="yes"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="38" name="bTest" color="7" fill="1" visible="no" active="yes"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="yes" active="yes"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="yes" active="yes"/>
@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -96,7 +96,7 @@
 <layer number="122" name="_bsilk" color="7" fill="1" visible="no" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
 <layer number="124" name="bTestmark" color="7" fill="1" visible="no" active="yes"/>
-<layer number="125" name="_tNames" color="7" fill="1" visible="no" active="yes"/>
+<layer number="125" name="_tNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="126" name="_bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="no" active="yes"/>
@@ -187,7 +187,6 @@ T. Dowrick
 resistors
 in this
 area</text>
-<dimension x1="143.51" y1="21.59" x2="36.56" y2="21.79" x3="90.019896875" y3="13.613428125" textsize="1.778" layer="16"/>
 </plain>
 <libraries>
 <library name="resistor">
@@ -2231,180 +2230,171 @@ design rules under a new name.</description>
 </autorouter>
 <elements>
 <element name="C1" library="resistor" package="C0603" value="0.1uF" x="97.62" y="48.64" smashed="yes" rot="R180">
-<attribute name="VALUE" x="99.455" y="47.145" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="98.255" y="48.005" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="98.255" y="50.545" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C10" library="resistor" package="C0603" value="0.1uF" x="90.67" y="55.34" smashed="yes" rot="R180"/>
+<element name="C10" library="resistor" package="C0603" value="0.1uF" x="90.67" y="55.34" smashed="yes" rot="R180">
+<attribute name="NAME" x="91.305" y="54.705" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="91.305" y="57.245" size="1.27" layer="27" rot="R180"/>
+</element>
 <element name="C11" library="resistor" package="C0603" value="0.1uF" x="88.06" y="67.62" smashed="yes" rot="R270">
-<attribute name="VALUE" x="89.955" y="67.655" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="88.695" y="68.255" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="86.155" y="68.255" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C12" library="resistor" package="C0603" value="0.1uF" x="85.03" y="68.06" smashed="yes">
-<attribute name="VALUE" x="83.795" y="64.755" size="1.27" layer="27"/>
+<attribute name="NAME" x="84.395" y="68.695" size="1.27" layer="25"/>
+<attribute name="VALUE" x="84.395" y="66.155" size="1.27" layer="27"/>
 </element>
 <element name="C13" library="resistor" package="C0603" value="0.1uF" x="83.72" y="50.84" smashed="yes" rot="R180">
-<attribute name="VALUE" x="90.155" y="53.545" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="84.355" y="50.205" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="84.355" y="52.745" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C15" library="resistor" package="C0603" value="10uF" x="96.98" y="58.4" smashed="yes" rot="R90">
-<attribute name="VALUE" x="99.885" y="55.365" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="96.345" y="57.765" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="98.885" y="57.765" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C16" library="resistor" package="C0603" value="10uF" x="98.68" y="64.85" smashed="yes" rot="R90">
+<attribute name="NAME" x="98.045" y="64.215" size="1.27" layer="25" rot="R90"/>
 <attribute name="VALUE" x="100.585" y="64.215" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C17" library="resistor" package="C0603" value="10uF" x="85" y="70.32" smashed="yes">
-<attribute name="VALUE" x="82.765" y="71.615" size="1.27" layer="27"/>
+<attribute name="NAME" x="84.365" y="70.955" size="1.27" layer="25"/>
+<attribute name="VALUE" x="84.365" y="68.415" size="1.27" layer="27"/>
 </element>
 <element name="C18" library="resistor" package="C0603" value="10uF" x="88.08" y="70.85" smashed="yes" rot="R90">
-<attribute name="VALUE" x="90.985" y="69.015" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="90.045" y="70.815" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="89.985" y="70.215" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C19" library="resistor" package="C0603" value="10uF" x="99.18" y="61.3" smashed="yes" rot="R90">
-<attribute name="VALUE" x="100.885" y="59.065" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="98.545" y="60.665" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="101.085" y="60.665" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C2" library="resistor" package="C0603" value="0.1uF" x="92.16" y="74.77" smashed="yes" rot="R270">
-<attribute name="VALUE" x="94.055" y="76.005" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="92.795" y="75.405" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="90.255" y="75.405" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C20" library="resistor" package="C0603" value="10uF" x="87.15" y="48.18" smashed="yes" rot="R180">
-<attribute name="VALUE" x="89.185" y="46.485" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="87.785" y="47.545" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="87.785" y="50.085" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C21" library="resistor" package="C0603" value="10uF" x="94.03" y="55.37" smashed="yes" rot="R180">
-<attribute name="VALUE" x="96.065" y="53.875" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="94.665" y="54.735" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="94.665" y="57.275" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C23" library="resistor" package="C0603" value="0.1uF" x="80.63" y="52.58" smashed="yes" rot="R90">
-<attribute name="VALUE" x="81.545" y="53.465" size="1.27" layer="27"/>
+<attribute name="NAME" x="79.995" y="51.945" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="82.535" y="51.945" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C24" library="resistor" package="C0603" value="10uF" x="78.22" y="52.55" smashed="yes" rot="R90">
-<attribute name="VALUE" x="75.115" y="49.475" size="1.27" layer="27"/>
+<attribute name="NAME" x="77.585" y="51.915" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="80.125" y="51.915" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C25" library="resistor" package="C0603" value="0.1uF" x="82.22" y="66.9" smashed="yes" rot="R270">
-<attribute name="VALUE" x="80.715" y="72.935" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="82.855" y="67.535" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="80.315" y="67.535" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C26" library="resistor" package="C0603" value="10uF" x="79.67" y="66.88" smashed="yes" rot="R270">
-<attribute name="VALUE" x="76.365" y="69.115" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="80.305" y="67.515" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="77.765" y="67.515" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C27" library="resistor" package="C0603" value="0.1uF" x="77.43" y="59.75" smashed="yes" rot="R270">
-<attribute name="VALUE" x="79.585" y="62.875" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="78.065" y="60.385" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="75.525" y="60.385" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C28" library="resistor" package="C0603" value="10uF" x="74.97" y="59.75" smashed="yes" rot="R270">
-<attribute name="VALUE" x="72.265" y="60.585" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="75.605" y="60.385" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="73.065" y="60.385" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C29" library="resistor" package="C0603" value="0.1uF" x="63.17" y="55.32" smashed="yes">
-<attribute name="VALUE" x="62.135" y="56.815" size="1.27" layer="27"/>
+<attribute name="NAME" x="62.535" y="55.955" size="1.27" layer="25"/>
+<attribute name="VALUE" x="62.535" y="53.415" size="1.27" layer="27"/>
 </element>
 <element name="C3" library="resistor" package="C0603" value="10uF" x="66.94" y="64.05" smashed="yes" rot="R270">
-<attribute name="VALUE" x="68.635" y="65.485" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="67.575" y="64.685" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="65.035" y="64.685" size="1.27" layer="27" rot="R270"/>
 </element>
 <element name="C30" library="resistor" package="C0603" value="0.1uF" x="97.55" y="52.48" smashed="yes" rot="R180">
-<attribute name="VALUE" x="99.985" y="51.185" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="98.185" y="51.845" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="98.185" y="54.385" size="1.27" layer="27" rot="R180"/>
 </element>
-<element name="C31" library="resistor" package="C0603" value="0.1uF" x="120.91" y="50.83" smashed="yes" rot="R90">
-<attribute name="VALUE" x="121.615" y="52.595" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="C32" library="resistor" package="C0603" value="10uF" x="135.65" y="38.41" smashed="yes" rot="R180">
-<attribute name="VALUE" x="137.485" y="40.915" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="C33" library="resistor" package="C0603" value="10uF" x="130.75" y="37.31" smashed="yes">
-<attribute name="VALUE" x="127.315" y="38.805" size="1.27" layer="27"/>
-</element>
-<element name="C35" library="resistor" package="C0603" value="10uF" x="123" y="50.85" smashed="yes" rot="R90">
-<attribute name="VALUE" x="125.505" y="50.215" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="C36" library="resistor" package="C0603" value="0.1uF" x="112.94" y="58.84" smashed="yes" rot="R270">
-<attribute name="VALUE" x="112.635" y="57.075" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="C37" library="resistor" package="C0603" value="10uF" x="110.75" y="58.82" smashed="yes" rot="R270">
-<attribute name="VALUE" x="110.045" y="56.855" size="1.27" layer="27" rot="R270"/>
-</element>
+<element name="C31" library="resistor" package="C0603" value="0.1uF" x="120.91" y="50.83" rot="R90"/>
+<element name="C32" library="resistor" package="C0603" value="10uF" x="135.65" y="38.41" rot="R180"/>
+<element name="C33" library="resistor" package="C0603" value="10uF" x="130.75" y="37.31"/>
+<element name="C35" library="resistor" package="C0603" value="10uF" x="123" y="50.85" rot="R90"/>
+<element name="C36" library="resistor" package="C0603" value="0.1uF" x="112.94" y="58.84" rot="R270"/>
+<element name="C37" library="resistor" package="C0603" value="10uF" x="110.75" y="58.82" rot="R270"/>
 <element name="C4" library="resistor" package="C0603" value="0.1uF" x="64.65" y="70.75" smashed="yes" rot="R90">
-<attribute name="VALUE" x="67.755" y="67.115" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="61.815" y="69.915" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="66.555" y="70.115" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C5" library="resistor" package="C0603" value="10uF" x="68.62" y="34.69" smashed="yes" rot="R180">
-<attribute name="VALUE" x="71.055" y="37.595" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="69.255" y="34.055" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="69.255" y="36.595" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C6" library="resistor" package="C0603" value="0.1uF" x="68.17" y="41.41" smashed="yes" rot="R90">
-<attribute name="VALUE" x="71.475" y="39.975" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="67.535" y="40.775" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="70.075" y="40.775" size="1.27" layer="27" rot="R90"/>
 </element>
-<element name="C7" library="resistor" package="C0603" value="0.1uF" x="87.12" y="50.84" smashed="yes" rot="R180"/>
+<element name="C7" library="resistor" package="C0603" value="0.1uF" x="87.12" y="50.84" smashed="yes" rot="R180">
+<attribute name="NAME" x="87.755" y="50.205" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="87.755" y="52.745" size="1.27" layer="27" rot="R180"/>
+</element>
 <element name="C8" library="resistor" package="C0603" value="0.1uF" x="94.84" y="58.43" smashed="yes" rot="R90">
-<attribute name="VALUE" x="93.745" y="57.195" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="94.205" y="57.795" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="96.745" y="57.795" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="C9" library="resistor" package="C0603" value="0.1uF" x="94.84" y="61.58" smashed="yes" rot="R90">
-<attribute name="VALUE" x="97.345" y="61.545" size="1.27" layer="27" rot="R90"/>
+<attribute name="NAME" x="94.205" y="60.945" size="1.27" layer="25" rot="R90"/>
+<attribute name="VALUE" x="96.745" y="60.945" size="1.27" layer="27" rot="R90"/>
 </element>
 <element name="IC1" library="burr-brown" package="SOT223" value="REG1117" x="61.37" y="65.1" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="14P6981" x="61.37" y="65.1" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="REG1117" x="61.37" y="65.1" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="61.37" y="65.1" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="1097566" x="61.37" y="65.1" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="57.052" y="62.56" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="67.212" y="62.306" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
 <element name="IC2" library="burr-brown" package="SOT223" value="REG1117" x="61.98" y="36.88" smashed="yes" rot="R90">
 <attribute name="OC_NEWARK" value="14P6981" x="61.98" y="36.88" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="REG1117" x="61.98" y="36.88" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="" x="61.98" y="36.88" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="1097566" x="61.98" y="36.88" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="57.662" y="34.34" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="VALUE" x="67.822" y="34.086" size="1.27" layer="27" ratio="10" rot="R90"/>
 </element>
-<element name="JP1" library="jumper" package="JP3Q" value="" x="130.96" y="53.96" smashed="yes" rot="R180">
-<attribute name="VALUE" x="134.389" y="59.802" size="1.27" layer="27" ratio="10" rot="R180"/>
-</element>
+<element name="JP1" library="jumper" package="JP3Q" value="" x="130.96" y="53.96" rot="R180"/>
 <element name="JP2" library="SwitchBoard" package="JST-2-SMD" value="" x="95.48" y="30.38" smashed="yes" rot="R180">
 <attribute name="NAME" x="96.75" y="29.11" size="0.4064" layer="25" rot="R180"/>
 <attribute name="VALUE" x="96.75" y="30.38" size="0.4064" layer="27" rot="R180"/>
 </element>
-<element name="JP3" library="SwitchBoard" package="JST-2-SMD" value="" x="122.75" y="30.18" smashed="yes" rot="R180">
-<attribute name="NAME" x="124.02" y="28.91" size="0.4064" layer="25" rot="R180"/>
-<attribute name="VALUE" x="124.02" y="30.18" size="0.4064" layer="27" rot="R180"/>
-</element>
-<element name="OP1" library="RC4560" package="SO8" value="RC4560S08-RC4560" x="117.2" y="54.91" smashed="yes" rot="R180"/>
+<element name="JP3" library="SwitchBoard" package="JST-2-SMD" value="" x="122.75" y="30.18" rot="R180"/>
+<element name="OP1" library="RC4560" package="SO8" value="RC4560S08-RC4560" x="117.2" y="54.91" rot="R180"/>
 <element name="PCB1" library="Due_for_AD9954_CS" package="ARDUINO_DUE" value="ARDUINO_DUE" x="39.37" y="26.67" smashed="yes"/>
-<element name="R1_0.1%" library="adafruit" package="R0805" value="100K" x="125.32" y="46.4" smashed="yes" rot="R270">
-<attribute name="VALUE" x="123.034" y="47.162" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="R1_DAC_1%" library="adafruit" package="R0805" value="931" x="118.21" y="72.15" smashed="yes" rot="R270">
-<attribute name="VALUE" x="119.724" y="73.512" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="R2_0.1%" library="adafruit" package="R0805" value="100K" x="121.67" y="44.4" smashed="yes" rot="R270">
-<attribute name="VALUE" x="119.384" y="45.162" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="R2_DAC_1%" library="adafruit" package="R0805" value="1500" x="118.11" y="65.78" smashed="yes" rot="R90">
-<attribute name="VALUE" x="120.196" y="63.818" size="1.27" layer="27" rot="R90"/>
-</element>
+<element name="R1_0.1%" library="adafruit" package="R0805" value="100K" x="125.32" y="46.4" rot="R270"/>
+<element name="R1_DAC_1%" library="adafruit" package="R0805" value="931" x="118.21" y="72.15" rot="R270"/>
+<element name="R2_0.1%" library="adafruit" package="R0805" value="100K" x="121.67" y="44.4" rot="R270"/>
+<element name="R2_DAC_1%" library="adafruit" package="R0805" value="1500" x="118.11" y="65.78" rot="R90"/>
 <element name="R3" library="adafruit" package="R0805" value="10k" x="60.32" y="52.51" smashed="yes" rot="R270">
+<attribute name="NAME" x="61.336" y="53.272" size="1.27" layer="25" rot="R270"/>
 <attribute name="VALUE" x="58.034" y="53.272" size="1.27" layer="27" rot="R270"/>
 </element>
-<element name="R3_DAC_1%" library="adafruit" package="R0805" value="750" x="114.16" y="65.76" smashed="yes" rot="R90">
-<attribute name="VALUE" x="116.446" y="64.998" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="R4_DAC_1%" library="adafruit" package="R0805" value="1150" x="126.63" y="75.4" smashed="yes" rot="R270">
-<attribute name="VALUE" x="130.162" y="78.856" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="R6_0.1%" library="adafruit" package="R0805" value="100K" x="115.51" y="44.33" smashed="yes" rot="R90">
-<attribute name="VALUE" x="117.796" y="43.568" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="R7_0.1%" library="adafruit" package="R0805" value="100K" x="112.69" y="44.25" smashed="yes" rot="R270">
-<attribute name="VALUE" x="110.404" y="45.012" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="RF_DAC_1%" library="adafruit" package="R0805" value="750" x="122.56" y="60.42" smashed="yes" rot="R270">
-<attribute name="VALUE" x="120.274" y="61.182" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="RG_DAC_1%" library="adafruit" package="R0805" value="1500" x="122.76" y="67.98" smashed="yes" rot="R270">
-<attribute name="VALUE" x="124.674" y="69.542" size="1.27" layer="27" rot="R270"/>
-</element>
-<element name="RX_DAC_1%" library="adafruit" package="R0805" value="287" x="114.16" y="72.12" smashed="yes" rot="R90">
-<attribute name="VALUE" x="112.646" y="71.358" size="1.27" layer="27" rot="R90"/>
-</element>
-<element name="RY_DAC_1%" library="adafruit" package="R0805" value="309" x="122.74" y="75.12" smashed="yes" rot="R90">
-<attribute name="VALUE" x="119.958" y="77.574" size="1.27" layer="27"/>
-</element>
-<element name="R_GAIN1_0.1%" library="adafruit" package="R0805" value="2k" x="134.64" y="61.46" smashed="yes" rot="R270">
-<attribute name="VALUE" x="134.778" y="63.754" size="1.27" layer="27"/>
-</element>
-<element name="R_GAIN2_0.1%" library="adafruit" package="R0805" value="5k" x="131.66" y="61.46" smashed="yes" rot="R270">
-<attribute name="VALUE" x="132.422" y="64.826" size="1.27" layer="27" rot="R180"/>
-</element>
-<element name="R_GAIN3_0.1%" library="adafruit" package="R0805" value="10k" x="128.48" y="61.46" smashed="yes" rot="R270">
-<attribute name="VALUE" x="128.822" y="65.006" size="1.27" layer="27" rot="R180"/>
-</element>
+<element name="R3_DAC_1%" library="adafruit" package="R0805" value="750" x="114.16" y="65.76" rot="R90"/>
+<element name="R4_DAC_1%" library="adafruit" package="R0805" value="1150" x="126.63" y="75.4" rot="R270"/>
+<element name="R6_0.1%" library="adafruit" package="R0805" value="100K" x="115.51" y="44.33" rot="R90"/>
+<element name="R7_0.1%" library="adafruit" package="R0805" value="100K" x="112.69" y="44.25" rot="R270"/>
+<element name="RF_DAC_1%" library="adafruit" package="R0805" value="750" x="122.56" y="60.42" rot="R270"/>
+<element name="RG_DAC_1%" library="adafruit" package="R0805" value="1500" x="122.76" y="67.98" rot="R270"/>
+<element name="RX_DAC_1%" library="adafruit" package="R0805" value="287" x="114.16" y="72.12" rot="R90"/>
+<element name="RY_DAC_1%" library="adafruit" package="R0805" value="309" x="122.74" y="75.12" rot="R90"/>
+<element name="R_GAIN1_0.1%" library="adafruit" package="R0805" value="2k" x="134.64" y="61.46" rot="R270"/>
+<element name="R_GAIN2_0.1%" library="adafruit" package="R0805" value="5k" x="131.66" y="61.46" rot="R270"/>
+<element name="R_GAIN3_0.1%" library="adafruit" package="R0805" value="10k" x="128.48" y="61.46" rot="R270"/>
 <element name="R_SET1_0.1%" library="adafruit" package="R0805" value="7.87k" x="87.28" y="75.34" smashed="yes">
-<attribute name="VALUE" x="85.718" y="77.054" size="1.27" layer="27"/>
+<attribute name="NAME" x="85.518" y="77.756" size="1.27" layer="25"/>
+<attribute name="VALUE" x="86.518" y="73.054" size="1.27" layer="27"/>
 </element>
-<element name="S3" library="switch" package="TL4XPO" value="TL42PO" x="110.15" y="32.88" smashed="yes" rot="R270"/>
+<element name="S3" library="switch" package="TL4XPO" value="TL42PO" x="110.15" y="32.88" rot="R270"/>
 <element name="1.8VD" library="testpad" package="P1-13" value="PTR1PAD1-13" x="62.47" y="29.15" smashed="yes">
 <attribute name="TP_SIGNAL_NAME" value="" x="61.2" y="26.61" size="1" layer="37"/>
 <attribute name="NAME" x="62.254" y="30.82" size="1.27" layer="25" ratio="10"/>
@@ -2445,19 +2435,14 @@ design rules under a new name.</description>
 <attribute name="NAME" x="109.734" y="61.57" size="1.27" layer="25" ratio="10"/>
 <attribute name="VALUE" x="108.15" y="62.5" size="0.0254" layer="27"/>
 </element>
-<element name="TP5" library="testpad" package="P1-13" value="PTR1PAD1-13" x="125.47" y="57.5" smashed="yes">
-<attribute name="TP_SIGNAL_NAME" value="" x="124.2" y="54.96" size="1" layer="37"/>
-<attribute name="NAME" x="124.454" y="58.77" size="1.27" layer="25" ratio="10"/>
-<attribute name="VALUE" x="125.47" y="57.5" size="0.0254" layer="27"/>
+<element name="TP5" library="testpad" package="P1-13" value="PTR1PAD1-13" x="125.47" y="57.5">
+<attribute name="TP_SIGNAL_NAME" value="" x="124.2" y="54.96" size="1" layer="37" display="off"/>
 </element>
-<element name="IOUT+" library="testpad" package="P1-13" value="PTR1PAD1-13" x="129.7" y="49.21" smashed="yes" rot="R270">
-<attribute name="TP_SIGNAL_NAME" value="" x="127.16" y="50.48" size="1" layer="37" rot="R270"/>
-<attribute name="NAME" x="129.37" y="47.626" size="1.27" layer="25" ratio="10" rot="R270"/>
+<element name="IOUT+" library="testpad" package="P1-13" value="PTR1PAD1-13" x="129.7" y="49.21" rot="R270">
+<attribute name="TP_SIGNAL_NAME" value="" x="127.16" y="50.48" size="1" layer="37" rot="R270" display="off"/>
 </element>
-<element name="IOUT-" library="testpad" package="P1-13" value="PTR1PAD1-13" x="132.5" y="49.29" smashed="yes" rot="R270">
-<attribute name="TP_SIGNAL_NAME" value="" x="129.96" y="50.56" size="1" layer="37" rot="R270"/>
-<attribute name="NAME" x="132.17" y="47.106" size="1.27" layer="25" ratio="10" rot="R270"/>
-<attribute name="VALUE" x="132.5" y="49.29" size="0.0254" layer="27" rot="R270"/>
+<element name="IOUT-" library="testpad" package="P1-13" value="PTR1PAD1-13" x="132.5" y="49.29" rot="R270">
+<attribute name="TP_SIGNAL_NAME" value="" x="129.96" y="50.56" size="1" layer="37" rot="R270" display="off"/>
 </element>
 <element name="3V3" library="testpad" package="P1-13" value="PTR1PAD1-13" x="58.03" y="58.9" smashed="yes">
 <attribute name="TP_SIGNAL_NAME" value="" x="56.76" y="56.36" size="1" layer="37"/>
@@ -2475,21 +2460,27 @@ design rules under a new name.</description>
 <attribute name="MPN" value="AD9954YSVZ" x="84.59" y="59.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="SUPPLIER" value="ANALOG DEVICES" x="84.59" y="59.75" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_FARNELL" value="1581969" x="84.59" y="59.75" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="NAME" x="83.605" y="58.0956" size="2.0828" layer="25" ratio="10" rot="SR90"/>
+<attribute name="VALUE" x="101.115" y="83.2956" size="2.0828" layer="27" ratio="10" rot="SR90"/>
 </element>
-<element name="U2" library="LTC6900" package="SOT23-5L" value="LTC69000" x="65.72" y="52.26" smashed="yes" rot="R270"/>
-<element name="U4" library="LTC_By_element14_Batch_1" package="SOIC127P600X175-8N" value="LTC1044CS8PBF" x="132.71" y="33.19" smashed="yes" rot="R180">
+<element name="U2" library="LTC6900" package="SOT23-5L" value="LTC69000" x="65.72" y="52.26" smashed="yes" rot="R270">
+<attribute name="NAME" x="67.625" y="54.165" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="62.291" y="54.165" size="1.27" layer="27" rot="R270"/>
+</element>
+<element name="U4" library="LTC_By_element14_Batch_1" package="SOIC127P600X175-8N" value="LTC1044CS8PBF" x="132.71" y="33.19" rot="R180">
 <attribute name="PACKAGE" value="SOIC-8" x="132.71" y="33.19" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_NEWARK" value="55M8900" x="132.71" y="33.19" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="MPN" value="LTC1044CS8#PBF" x="132.71" y="33.19" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="SUPPLIER" value="Linear Technology" x="132.71" y="33.19" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="OC_FARNELL" value="1663593" x="132.71" y="33.19" size="1.778" layer="27" rot="R180" display="off"/>
-<attribute name="NAME" x="136.1644" y="28.745" size="2.0828" layer="25" ratio="10" rot="SR180"/>
 </element>
 <element name="C34" library="resistor" package="C0603" value="10uF" x="83.7" y="48.2" smashed="yes" rot="R180">
-<attribute name="VALUE" x="85.135" y="46.305" size="1.27" layer="27" rot="R180"/>
+<attribute name="NAME" x="84.335" y="47.565" size="1.27" layer="25" rot="R180"/>
+<attribute name="VALUE" x="84.335" y="50.105" size="1.27" layer="27" rot="R180"/>
 </element>
 <element name="C38" library="resistor" package="C0603" value="0.1uF" x="94.8" y="64.7" smashed="yes" rot="R270">
-<attribute name="VALUE" x="92.495" y="66.335" size="1.27" layer="27" rot="R270"/>
+<attribute name="NAME" x="95.435" y="65.335" size="1.27" layer="25" rot="R270"/>
+<attribute name="VALUE" x="92.895" y="65.335" size="1.27" layer="27" rot="R270"/>
 </element>
 </elements>
 <signals>
