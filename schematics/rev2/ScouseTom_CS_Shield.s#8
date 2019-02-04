@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -12258,16 +12258,6 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 <pinref part="U$1" gate="G$1" pin="5V"/>
 <wire x1="5.08" y1="88.9" x2="-20.32" y2="88.9" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="U$1" gate="G$1" pin="5V@1"/>
-<pinref part="P+6" gate="1" pin="+5V"/>
-<wire x1="60.96" y1="5.08" x2="60.96" y2="0" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="P+7" gate="1" pin="+5V"/>
-<pinref part="U$1" gate="G$1" pin="5V@2"/>
-<wire x1="111.76" y1="0" x2="111.76" y2="5.08" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -12280,51 +12270,51 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 </net>
 <net name="SW_TEST_1" class="0">
 <segment>
-<label x="175.26" y="38.1" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="TX2_16"/>
-<wire x1="124.46" y1="38.1" x2="175.26" y2="38.1" width="0.1524" layer="91"/>
+<label x="144.78" y="71.12" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="7"/>
+<wire x1="124.46" y1="71.12" x2="144.78" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW_SYNC" class="0">
 <segment>
-<label x="175.26" y="40.64" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="RX3_15"/>
-<wire x1="124.46" y1="40.64" x2="175.26" y2="40.64" width="0.1524" layer="91"/>
+<label x="144.78" y="76.2" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="8"/>
+<wire x1="124.46" y1="76.2" x2="144.78" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW_RESET" class="0">
 <segment>
-<label x="175.26" y="43.18" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="TX3_14"/>
-<wire x1="124.46" y1="43.18" x2="175.26" y2="43.18" width="0.1524" layer="91"/>
+<label x="149.86" y="78.74" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="9"/>
+<wire x1="124.46" y1="78.74" x2="149.86" y2="78.74" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW_DIN+" class="0">
 <segment>
-<label x="180.34" y="58.42" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="2"/>
-<wire x1="124.46" y1="58.42" x2="180.34" y2="58.42" width="0.1524" layer="91"/>
+<label x="144.78" y="81.28" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="10"/>
+<wire x1="124.46" y1="81.28" x2="144.78" y2="81.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW_DIN-" class="0">
 <segment>
-<label x="175.26" y="60.96" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="3"/>
-<wire x1="124.46" y1="60.96" x2="175.26" y2="60.96" width="0.1524" layer="91"/>
+<label x="149.86" y="83.82" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="11"/>
+<wire x1="124.46" y1="83.82" x2="149.86" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW_SCLK" class="0">
 <segment>
-<label x="180.34" y="63.5" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="4"/>
-<wire x1="124.46" y1="63.5" x2="180.34" y2="63.5" width="0.1524" layer="91"/>
+<label x="144.78" y="86.36" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="12"/>
+<wire x1="124.46" y1="86.36" x2="144.78" y2="86.36" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SW_TEST_2" class="0">
 <segment>
-<label x="175.26" y="66.04" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$1" gate="G$1" pin="5"/>
-<wire x1="124.46" y1="66.04" x2="175.26" y2="66.04" width="0.1524" layer="91"/>
+<label x="149.86" y="88.9" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="13"/>
+<wire x1="124.46" y1="88.9" x2="149.86" y2="88.9" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDO" class="0">
@@ -12385,58 +12375,58 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 </net>
 <net name="IND_STOP" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="13"/>
-<wire x1="124.46" y1="88.9" x2="149.86" y2="88.9" width="0.1524" layer="91"/>
-<label x="149.86" y="88.9" size="1.27" layer="95" xref="yes"/>
+<label x="167.64" y="68.58" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="6"/>
+<wire x1="124.46" y1="68.58" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_START" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="12"/>
-<wire x1="124.46" y1="86.36" x2="154.94" y2="86.36" width="0.1524" layer="91"/>
-<label x="154.94" y="86.36" size="1.27" layer="95" xref="yes"/>
+<label x="175.26" y="66.04" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="5"/>
+<wire x1="124.46" y1="66.04" x2="175.26" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_STIM" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="11"/>
-<wire x1="124.46" y1="83.82" x2="149.86" y2="83.82" width="0.1524" layer="91"/>
-<label x="149.86" y="83.82" size="1.27" layer="95" xref="yes"/>
+<label x="167.64" y="63.5" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="4"/>
+<wire x1="124.46" y1="63.5" x2="167.64" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_SWITCH" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="10"/>
-<wire x1="124.46" y1="81.28" x2="154.94" y2="81.28" width="0.1524" layer="91"/>
-<label x="154.94" y="81.28" size="1.27" layer="95" xref="yes"/>
+<label x="175.26" y="60.96" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="3"/>
+<wire x1="124.46" y1="60.96" x2="175.26" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_EX_3" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="9"/>
-<wire x1="124.46" y1="78.74" x2="149.86" y2="78.74" width="0.1524" layer="91"/>
-<label x="149.86" y="78.74" size="1.27" layer="95" xref="yes"/>
+<label x="167.64" y="58.42" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="2"/>
+<wire x1="124.46" y1="58.42" x2="167.64" y2="58.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_EX_2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="8"/>
-<wire x1="124.46" y1="76.2" x2="154.94" y2="76.2" width="0.1524" layer="91"/>
-<label x="154.94" y="76.2" size="1.27" layer="95" xref="yes"/>
+<label x="167.64" y="43.18" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="TX3_14"/>
+<wire x1="124.46" y1="43.18" x2="167.64" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_EX_1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="7"/>
-<wire x1="124.46" y1="71.12" x2="149.86" y2="71.12" width="0.1524" layer="91"/>
-<label x="149.86" y="71.12" size="1.27" layer="95" xref="yes"/>
+<label x="172.72" y="40.64" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="RX3_15"/>
+<wire x1="124.46" y1="40.64" x2="172.72" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="IND_FREQ" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="6"/>
-<wire x1="124.46" y1="68.58" x2="154.94" y2="68.58" width="0.1524" layer="91"/>
-<label x="154.94" y="68.58" size="1.27" layer="95" xref="yes"/>
+<label x="167.64" y="38.1" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$1" gate="G$1" pin="TX2_16"/>
+<wire x1="124.46" y1="38.1" x2="167.64" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
