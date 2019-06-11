@@ -12,7 +12,7 @@
 */
 
 //#include "BreadboardPins.h" // Pins for breadboard version - used by kirill and me (testing)
-#include "PCBPinsRev1.h" // Pins to use the Rev 1 shield - Indicator pins are same as some used on CS board
+#include "PCBPinsRev2.h" // Pins to use the Rev 1 shield - Indicator pins are same as some used on CS board
 
 
 int sinkpin = 1; // pin that the sink is connected to

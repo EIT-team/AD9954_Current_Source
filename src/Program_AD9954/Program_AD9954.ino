@@ -1,11 +1,3 @@
-/* This is code to start injecting at a selected frequency on startup and run forever
-
-
-*/
-
-int CS_Freq = 1000;
-
-
 #include <SPI.h>
 #include "AD9954.h"
 
@@ -54,14 +46,63 @@ void setup() {
   Serial.setTimeout(10);
   resetAD9954();
 
-  Serial.println("Starting up and getting going");
-  singleTone(CS_Freq);
-  updateAD9954();
-
 
 }
 
 void loop() {
+
+
+
+  unsigned long freq;
+  unsigned long input_value;
+
+  while (1) {
+
+    String what_to_program = "";
+
+    if (Serial.available()) {
+
+      // First part is the command name
+      // Get a string, ignoring case
+      what_to_program = Serial.readStringUntil(' ');
+      what_to_program.toLowerCase();
+
+      // Get an the frequency as an integer
+      input_value = Serial.parseInt(); // Get an int
+
+      Serial.read();
+    }
+
+    if (what_to_program == "frequency") {
+
+      resetAD9954();
+      freq = input_value;
+      Serial.print("Frequency set to ");
+      Serial.print(freq);
+      Serial.println("Hz");
+    }
+
+    if (what_to_program == "stim") {
+
+      if (input_value >= 1) {
+        if (freq > 0) {
+          Serial.println("Starting injection!");
+          singleTone(freq);
+          updateAD9954();
+        }
+
+        else {
+          printInvalidFrequency();
+        }
+      }
+
+      else {
+        Serial.println("Stopping injection");
+        resetAD9954();
+      }
+    }
+  }
+
 }
 
 

@@ -12,6 +12,13 @@ void init_pins()
 	pinMode(SYNC, OUTPUT);
 	pinMode(RESET, OUTPUT);
 
+	// pins for testing switch network
+	pinMode(TEST_1, INPUT);
+	pinMode(TEST_2, INPUT);
+
+
+
+
 	//pins for indicator channels
 	pinMode(IND_SWITCH, OUTPUT);
 	pinMode(IND_STIM, OUTPUT);
@@ -30,8 +37,8 @@ void init_pins()
 //	pinMode(INTR_PMARK, INPUT);
 
 	//power pins
-//	pinMode(PWR_STIM, OUTPUT);
-//	pinMode(PWR_SWITCH, OUTPUT);
+	//pinMode(PWR_STIM, OUTPUT);
+	//pinMode(PWR_SWITCH, OUTPUT);
 
 
 	//pinMode(LED, OUTPUT);
@@ -72,6 +79,6 @@ void reset_ind()
 void reset_pins_pwr()
 {
 	//reset all power pins
-//	digitalWrite(PWR_STIM, LOW);
-//	digitalWrite(PWR_SWITCH, LOW);
+	//digitalWrite(PWR_STIM, LOW);
+	//digitalWrite(PWR_SWITCH, LOW);
 }

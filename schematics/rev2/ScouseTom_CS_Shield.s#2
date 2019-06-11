@@ -11862,7 +11862,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 <sheet>
 <description>Indicators</description>
 <plain>
-<text x="81.28" y="144.78" size="1.778" layer="91">ACTICHAMP PINOUT
+<text x="96.52" y="73.66" size="1.778" layer="91">ACTICHAMP PINOUT
 BIOSEMI IS 37 PIN with 37 as GND</text>
 <text x="45.72" y="-33.02" size="1.27" layer="91">NIC TO GND to make pin comp with adum1410</text>
 <text x="-12.7" y="15.24" size="1.27" layer="91">REDUCE BYPASS CAPS? DATASHEET IS ONLY 0.01-0.1uF</text>
@@ -11872,8 +11872,8 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 <text x="-22.86" y="-33.02" size="1.27" layer="97">DISABLE LOW TO HAVE IT ON ALL THE TIME</text>
 </plain>
 <instances>
-<instance part="DSUB3" gate="G$1" x="93.98" y="129.54"/>
-<instance part="JP5" gate="A" x="175.26" y="96.52"/>
+<instance part="DSUB3" gate="G$1" x="109.22" y="58.42"/>
+<instance part="JP5" gate="A" x="190.5" y="25.4"/>
 <instance part="GND6" gate="1" x="-106.68" y="27.94"/>
 <instance part="P+3" gate="1" x="-109.22" y="53.34" rot="R90"/>
 <instance part="C13" gate="G$1" x="-83.82" y="43.18"/>
@@ -12142,19 +12142,19 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="9"/>
-<wire x1="86.36" y1="127" x2="81.28" y2="127" width="0.1524" layer="91"/>
-<wire x1="81.28" y1="127" x2="81.28" y2="121.92" width="0.1524" layer="91"/>
-<label x="81.28" y="121.92" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="55.88" x2="96.52" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="55.88" x2="96.52" y2="50.8" width="0.1524" layer="91"/>
+<label x="96.52" y="50.8" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="9"/>
-<wire x1="172.72" y1="91.44" x2="147.32" y2="91.44" width="0.1524" layer="91"/>
-<label x="147.32" y="91.44" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="20.32" x2="162.56" y2="20.32" width="0.1524" layer="91"/>
+<label x="162.56" y="20.32" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="10"/>
-<wire x1="180.34" y1="91.44" x2="210.82" y2="91.44" width="0.1524" layer="91"/>
-<label x="210.82" y="91.44" size="1.778" layer="95" xref="yes"/>
+<wire x1="195.58" y1="20.32" x2="226.06" y2="20.32" width="0.1524" layer="91"/>
+<label x="226.06" y="20.32" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="V_ISO_TRIG" class="0">
@@ -12204,13 +12204,13 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="3"/>
-<wire x1="101.6" y1="129.54" x2="106.68" y2="129.54" width="0.1524" layer="91"/>
-<label x="106.68" y="129.54" size="1.778" layer="95" xref="yes"/>
+<wire x1="116.84" y1="58.42" x2="121.92" y2="58.42" width="0.1524" layer="91"/>
+<label x="121.92" y="58.42" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="6"/>
-<wire x1="180.34" y1="96.52" x2="210.82" y2="96.52" width="0.1524" layer="91"/>
-<label x="210.82" y="96.52" size="1.778" layer="95" xref="yes"/>
+<wire x1="195.58" y1="25.4" x2="226.06" y2="25.4" width="0.1524" layer="91"/>
+<label x="226.06" y="25.4" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="IND_STIM_ISO" class="0">
@@ -12221,13 +12221,13 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="2"/>
-<wire x1="101.6" y1="132.08" x2="127" y2="132.08" width="0.1524" layer="91"/>
-<label x="127" y="132.08" size="1.778" layer="95" xref="yes"/>
+<wire x1="116.84" y1="60.96" x2="142.24" y2="60.96" width="0.1524" layer="91"/>
+<label x="142.24" y="60.96" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="7"/>
-<wire x1="172.72" y1="93.98" x2="167.64" y2="93.98" width="0.1524" layer="91"/>
-<label x="167.64" y="93.98" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="22.86" x2="182.88" y2="22.86" width="0.1524" layer="91"/>
+<label x="182.88" y="22.86" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IND_SWITCH_ISO" class="0">
@@ -12238,20 +12238,20 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="1"/>
-<wire x1="101.6" y1="134.62" x2="106.68" y2="134.62" width="0.1524" layer="91"/>
-<label x="106.68" y="134.62" size="1.778" layer="95" xref="yes"/>
+<wire x1="116.84" y1="63.5" x2="121.92" y2="63.5" width="0.1524" layer="91"/>
+<label x="121.92" y="63.5" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="8"/>
-<wire x1="180.34" y1="93.98" x2="185.42" y2="93.98" width="0.1524" layer="91"/>
-<label x="185.42" y="93.98" size="1.778" layer="95" xref="yes"/>
+<wire x1="195.58" y1="22.86" x2="200.66" y2="22.86" width="0.1524" layer="91"/>
+<label x="200.66" y="22.86" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="IND_STOP_ISO" class="0">
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="4"/>
-<wire x1="101.6" y1="127" x2="127" y2="127" width="0.1524" layer="91"/>
-<label x="127" y="127" size="1.778" layer="95" xref="yes"/>
+<wire x1="116.84" y1="55.88" x2="142.24" y2="55.88" width="0.1524" layer="91"/>
+<label x="142.24" y="55.88" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <label x="45.72" y="-15.24" size="1.778" layer="95" xref="yes"/>
@@ -12260,15 +12260,15 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="5"/>
-<wire x1="172.72" y1="96.52" x2="147.32" y2="96.52" width="0.1524" layer="91"/>
-<label x="147.32" y="96.52" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="25.4" x2="162.56" y2="25.4" width="0.1524" layer="91"/>
+<label x="162.56" y="25.4" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IND_FREQ_ISO" class="0">
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="5"/>
-<wire x1="101.6" y1="124.46" x2="106.68" y2="124.46" width="0.1524" layer="91"/>
-<label x="106.68" y="124.46" size="1.778" layer="95" xref="yes"/>
+<wire x1="116.84" y1="53.34" x2="121.92" y2="53.34" width="0.1524" layer="91"/>
+<label x="121.92" y="53.34" size="1.778" layer="95" xref="yes"/>
 </segment>
 <segment>
 <label x="190.5" y="-10.16" size="1.778" layer="95" xref="yes"/>
@@ -12277,15 +12277,15 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="4"/>
-<wire x1="180.34" y1="99.06" x2="185.42" y2="99.06" width="0.1524" layer="91"/>
-<label x="185.42" y="99.06" size="1.778" layer="95" xref="yes"/>
+<wire x1="195.58" y1="27.94" x2="200.66" y2="27.94" width="0.1524" layer="91"/>
+<label x="200.66" y="27.94" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="IND_EX_1_ISO" class="0">
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="6"/>
-<wire x1="86.36" y1="134.62" x2="81.28" y2="134.62" width="0.1524" layer="91"/>
-<label x="81.28" y="134.62" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="63.5" x2="96.52" y2="63.5" width="0.1524" layer="91"/>
+<label x="96.52" y="63.5" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="190.5" y="-12.7" size="1.778" layer="95" xref="yes"/>
@@ -12294,15 +12294,15 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="3"/>
-<wire x1="172.72" y1="99.06" x2="167.64" y2="99.06" width="0.1524" layer="91"/>
-<label x="167.64" y="99.06" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="27.94" x2="182.88" y2="27.94" width="0.1524" layer="91"/>
+<label x="182.88" y="27.94" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IND_EX_2_ISO" class="0">
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="7"/>
-<wire x1="86.36" y1="132.08" x2="66.04" y2="132.08" width="0.1524" layer="91"/>
-<label x="66.04" y="132.08" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="60.96" x2="81.28" y2="60.96" width="0.1524" layer="91"/>
+<label x="81.28" y="60.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="190.5" y="-15.24" size="1.778" layer="95" xref="yes"/>
@@ -12311,15 +12311,15 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="2"/>
-<wire x1="180.34" y1="101.6" x2="210.82" y2="101.6" width="0.1524" layer="91"/>
-<label x="210.82" y="101.6" size="1.778" layer="95" xref="yes"/>
+<wire x1="195.58" y1="30.48" x2="226.06" y2="30.48" width="0.1524" layer="91"/>
+<label x="226.06" y="30.48" size="1.778" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="IND_EX_3_ISO" class="0">
 <segment>
 <pinref part="DSUB3" gate="G$1" pin="8"/>
-<wire x1="86.36" y1="129.54" x2="81.28" y2="129.54" width="0.1524" layer="91"/>
-<label x="81.28" y="129.54" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="101.6" y1="58.42" x2="96.52" y2="58.42" width="0.1524" layer="91"/>
+<label x="96.52" y="58.42" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="190.5" y="-17.78" size="1.778" layer="95" xref="yes"/>
@@ -12328,8 +12328,8 @@ BIOSEMI IS 37 PIN with 37 as GND</text>
 </segment>
 <segment>
 <pinref part="JP5" gate="A" pin="1"/>
-<wire x1="172.72" y1="101.6" x2="147.32" y2="101.6" width="0.1524" layer="91"/>
-<label x="147.32" y="101.6" size="1.778" layer="95" rot="R180" xref="yes"/>
+<wire x1="187.96" y1="30.48" x2="162.56" y2="30.48" width="0.1524" layer="91"/>
+<label x="162.56" y="30.48" size="1.778" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GND_ISO_INIT" class="0">

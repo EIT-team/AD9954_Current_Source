@@ -25,20 +25,6 @@ void init_pins()
 
 
 
-
-	//interupt channels
-//	pinMode(INTR_PMARK, INPUT);
-
-	//power pins
-//	pinMode(PWR_STIM, OUTPUT);
-//	pinMode(PWR_SWITCH, OUTPUT);
-
-
-	//pinMode(LED, OUTPUT);
-	//pinMode(fakepmarkpin, OUTPUT);
-
-	//set default values on every pin
-
 }
 
 void reset_pins()
@@ -63,15 +49,35 @@ void reset_ind()
 	digitalWriteDirect(IND_START, LOW);
 	digitalWriteDirect(IND_STOP, LOW);
 
-	//digitalWriteDirect(LED, LOW);
-	//digitalWrite(fakepmarkpin, LOW);
+  digitalWriteDirect(IND_EX_1, LOW);
+  digitalWriteDirect(IND_EX_2, LOW);
+  digitalWriteDirect(IND_EX_3, LOW);
+
 }
 
-
-
-void reset_pins_pwr()
+void ind_low()
 {
-	//reset all power pins
-//	digitalWrite(PWR_STIM, LOW);
-//	digitalWrite(PWR_SWITCH, LOW);
+  //reset all indicator pins
+  digitalWriteDirect(IND_SWITCH, LOW);
+  digitalWriteDirect(IND_STIM, LOW);
+  digitalWriteDirect(IND_FREQ, LOW);
+  digitalWriteDirect(IND_START, LOW);
+  digitalWriteDirect(IND_STOP, LOW);
+  digitalWriteDirect(IND_EX_1, LOW);
+  digitalWriteDirect(IND_EX_2, LOW);
+  digitalWriteDirect(IND_EX_3, LOW);
+
+}
+
+void ind_high()
+{
+  //reset all indicator pins
+  digitalWriteDirect(IND_SWITCH, HIGH);
+  digitalWriteDirect(IND_STIM, HIGH);
+  digitalWriteDirect(IND_FREQ, HIGH);
+  digitalWriteDirect(IND_START, HIGH);
+  digitalWriteDirect(IND_STOP, HIGH);
+  digitalWriteDirect(IND_EX_1, HIGH);
+  digitalWriteDirect(IND_EX_2, HIGH);
+  digitalWriteDirect(IND_EX_3, HIGH);
 }
