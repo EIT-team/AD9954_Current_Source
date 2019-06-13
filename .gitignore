@@ -1,3 +1,11 @@
 .DS_Store
 desktop.ini
 *.swp
+**/.vs/
+**__vm/
+**/Release/
+**.vcxproj*
+**/.vscode
+**/.pioenvs
+**/.piolibdeps
+**CppProperties.json

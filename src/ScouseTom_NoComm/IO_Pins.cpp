@@ -1,3 +1,11 @@
+// 
+// 
+// 
+
+#include "IO_Pins.h"
+#include "PCBPinsRev2.h"
+#include "digitalDirect.h"
+
 /*
 Stuff for initilalising pins and indicator pins*/
 
@@ -23,6 +31,11 @@ void init_pins()
 	pinMode(IND_EX_2, OUTPUT);
 	pinMode(IND_EX_3, OUTPUT);
 
+
+	// AD9954 Pins
+	pinMode(SS_PIN, OUTPUT);
+	pinMode(RESET_PIN, OUTPUT);
+	pinMode(UPDATE_PIN, OUTPUT);
 
 
 
@@ -62,45 +75,38 @@ void reset_ind()
 	digitalWriteDirect(IND_FREQ, LOW);
 	digitalWriteDirect(IND_START, LOW);
 	digitalWriteDirect(IND_STOP, LOW);
+	digitalWriteDirect(IND_EX_1, LOW);
+	digitalWriteDirect(IND_EX_2, LOW);
+	digitalWriteDirect(IND_EX_3, LOW);
 
-  digitalWriteDirect(IND_EX_1, LOW);
-  digitalWriteDirect(IND_EX_2, LOW);
-  digitalWriteDirect(IND_EX_3, LOW);
-
-	//digitalWriteDirect(LED, LOW);
-	//digitalWrite(fakepmarkpin, LOW);
 }
 
 void ind_low()
 {
-  //reset all indicator pins
-  digitalWriteDirect(IND_SWITCH, LOW);
-  digitalWriteDirect(IND_STIM, LOW);
-  digitalWriteDirect(IND_FREQ, LOW);
-  digitalWriteDirect(IND_START, LOW);
-  digitalWriteDirect(IND_STOP, LOW);
-  digitalWriteDirect(IND_EX_1, LOW);
-  digitalWriteDirect(IND_EX_2, LOW);
-  digitalWriteDirect(IND_EX_3, LOW);
+	//reset all indicator pins
+	digitalWriteDirect(IND_SWITCH, LOW);
+	digitalWriteDirect(IND_STIM, LOW);
+	digitalWriteDirect(IND_FREQ, LOW);
+	digitalWriteDirect(IND_START, LOW);
+	digitalWriteDirect(IND_STOP, LOW);
+	digitalWriteDirect(IND_EX_1, LOW);
+	digitalWriteDirect(IND_EX_2, LOW);
+	digitalWriteDirect(IND_EX_3, LOW);
 
 }
 
 void ind_high()
 {
-  //reset all indicator pins
-  digitalWriteDirect(IND_SWITCH, HIGH);
-  digitalWriteDirect(IND_STIM, HIGH);
-  digitalWriteDirect(IND_FREQ, HIGH);
-  digitalWriteDirect(IND_START, HIGH);
-  digitalWriteDirect(IND_STOP, HIGH);
-  digitalWriteDirect(IND_EX_1, HIGH);
-  digitalWriteDirect(IND_EX_2, HIGH);
-  digitalWriteDirect(IND_EX_3, HIGH);
+	//reset all indicator pins
+	digitalWriteDirect(IND_SWITCH, HIGH);
+	digitalWriteDirect(IND_STIM, HIGH);
+	digitalWriteDirect(IND_FREQ, HIGH);
+	digitalWriteDirect(IND_START, HIGH);
+	digitalWriteDirect(IND_STOP, HIGH);
+	digitalWriteDirect(IND_EX_1, HIGH);
+	digitalWriteDirect(IND_EX_2, HIGH);
+	digitalWriteDirect(IND_EX_3, HIGH);
 }
 
-void reset_pins_pwr()
-{
-	//reset all power pins
-	//digitalWrite(PWR_STIM, LOW);
-	//digitalWrite(PWR_SWITCH, LOW);
-}
+
+

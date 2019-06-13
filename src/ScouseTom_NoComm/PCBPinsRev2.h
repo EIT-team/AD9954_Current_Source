@@ -20,6 +20,15 @@ const int IND_EX_1= 15;
 const int IND_EX_2= 14;
 const int IND_EX_3= 2;
 
+//AD9954 pins
+
+const int SS_PIN = 17;
+const int RESET_PIN = 21;
+const int UPDATE_PIN = 18;
+const int PS0 = 20;
+const int PS1 = 19;
+const int OSK = 27;
+
 
 /*
 //pins to turn the triggers on and off
