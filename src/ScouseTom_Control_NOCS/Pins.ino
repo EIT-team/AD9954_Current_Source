@@ -1,11 +1,3 @@
-// 
-// 
-// 
-
-#include "IO_Pins.h"
-#include "PCBPinsRev2.h"
-#include "digitalDirect.h"
-
 /*
 Stuff for initilalising pins and indicator pins*/
 
@@ -20,6 +12,10 @@ void init_pins()
 	pinMode(SYNC, OUTPUT);
 	pinMode(RESET, OUTPUT);
 
+	// pins for testing switch network
+	pinMode(TEST_1, INPUT);
+	pinMode(TEST_2, INPUT);
+
 	//pins for indicator channels
 	pinMode(IND_SWITCH, OUTPUT);
 	pinMode(IND_STIM, OUTPUT);
@@ -30,7 +26,6 @@ void init_pins()
 	pinMode(IND_EX_1, OUTPUT);
 	pinMode(IND_EX_2, OUTPUT);
 	pinMode(IND_EX_3, OUTPUT);
-
 
 	// AD9954 Pins
 	pinMode(SS_PIN, OUTPUT);
@@ -44,7 +39,6 @@ void init_pins()
 
 	//power pins
 	//pinMode(PWR_STIM, OUTPUT);
-	//pinMode(PWR_SWITCH, OUTPUT);
 
 
 	//pinMode(LED, OUTPUT);
@@ -65,6 +59,7 @@ void reset_pins()
 	digitalWriteDirect(RESET, LOW);
 
 
+
 }
 
 void reset_ind()
@@ -77,36 +72,18 @@ void reset_ind()
 	digitalWriteDirect(IND_STOP, LOW);
 	digitalWriteDirect(IND_EX_1, LOW);
 	digitalWriteDirect(IND_EX_2, LOW);
-	digitalWriteDirect(IND_EX_3, LOW);
-
-}
-
-void ind_low()
-{
-	//reset all indicator pins
-	digitalWriteDirect(IND_SWITCH, LOW);
-	digitalWriteDirect(IND_STIM, LOW);
-	digitalWriteDirect(IND_FREQ, LOW);
-	digitalWriteDirect(IND_START, LOW);
-	digitalWriteDirect(IND_STOP, LOW);
-	digitalWriteDirect(IND_EX_1, LOW);
-	digitalWriteDirect(IND_EX_2, LOW);
-	digitalWriteDirect(IND_EX_3, LOW);
-
-}
-
-void ind_high()
-{
-	//reset all indicator pins
-	digitalWriteDirect(IND_SWITCH, HIGH);
-	digitalWriteDirect(IND_STIM, HIGH);
-	digitalWriteDirect(IND_FREQ, HIGH);
-	digitalWriteDirect(IND_START, HIGH);
-	digitalWriteDirect(IND_STOP, HIGH);
-	digitalWriteDirect(IND_EX_1, HIGH);
-	digitalWriteDirect(IND_EX_2, HIGH);
 	digitalWriteDirect(IND_EX_3, HIGH);
 }
+
+
+
+void reset_pins_pwr()
+{
+	//reset all power pins
+//digitalWrite(PWR_STIM, LOW);
+
+}
+
 
 void indpins_check() //this checks if there are any pulses left on any of the indicator pins - if not then turn off timer 
 {
@@ -167,7 +144,7 @@ void indpins_init() //initialise the indicator pins
 
 void indChnIdent() //pulses to send at start of injections to indicate which indicator pins are which
 {
-
+	
 	int del = 430;
 
 
@@ -189,6 +166,34 @@ void indChnIdent() //pulses to send at start of injections to indicate which ind
 
 
 }
+
+void ind_low()
+{
+	//set all indicator pins low
+	digitalWriteDirect(IND_SWITCH, LOW);
+	digitalWriteDirect(IND_STIM, LOW);
+	digitalWriteDirect(IND_FREQ, LOW);
+	digitalWriteDirect(IND_START, LOW);
+	digitalWriteDirect(IND_STOP, LOW);
+	digitalWriteDirect(IND_EX_1, LOW);
+	digitalWriteDirect(IND_EX_2, LOW);
+	digitalWriteDirect(IND_EX_3, LOW);
+
+}
+
+void ind_high()
+{
+	//set all indicator pins high
+	digitalWriteDirect(IND_SWITCH, HIGH);
+	digitalWriteDirect(IND_STIM, HIGH);
+	digitalWriteDirect(IND_FREQ, HIGH);
+	digitalWriteDirect(IND_START, HIGH);
+	digitalWriteDirect(IND_STOP, HIGH);
+	digitalWriteDirect(IND_EX_1, HIGH);
+	digitalWriteDirect(IND_EX_2, HIGH);
+	digitalWriteDirect(IND_EX_3, HIGH);
+}
+
 
 void ind_pulse_with_delay(int chn, int del, int repeats)
 {

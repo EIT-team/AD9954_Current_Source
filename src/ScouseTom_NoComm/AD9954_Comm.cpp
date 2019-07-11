@@ -1,6 +1,7 @@
 #include "AD9954_Comm.h"
 #include "PCBPinsRev2.h"
 #include "SPI.h"
+#include "Arduino.h"
 
 void AD9954_Init()
 {
