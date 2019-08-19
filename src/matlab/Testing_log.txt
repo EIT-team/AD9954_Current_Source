@@ -1,0 +1,54 @@
+##################################
+Log file for EIT with ScouseTom system
+Date and time this file was created : 19-Aug-2019 15:08:49
+Description of this ExpSetup file : Nir Drift Experiment, Anya/Anka
+ExpSetup created : 19-Aug-2015 10:30:51
+The EEG system file stored was : Null- user was testing
+The PC name was : DESKTOP-EPCU2JJ
+The Username was : James
+--------------
+System in "SingleFreqMode" - single amp and freq, running continuously
+Amplitude: 1 uA
+Frequency: 100 Hz
+Protocol loaded was Spiral16_ScousTom.txt with 3 lines 
+Sources	Sinks
+1	6
+4	18
+21	28
+--------------
+Number of repeats : 10 
+Injection time per protocol line : 500 ms or 0.50 s
+Estimated time to complete measurements : 15.00 sec 
+--------------
+##################################
+Codes for info from arduino: 
+R	Current Repeat
+P	Current Protocol Line
+O	frequency order (multifreqmode)
+D	phases (stim mode)
+Codes for commmands sent to arduino: 
+S	Start
+H	Stop
+I	Initialise
+##
+Time	Arduino Message	PC Message
+0.00s		Starting Injection
+0.00s	S	
+0.22s	+OK	
+0.22s		Comm ok, everything ready to go
+0.23s	+OK	
+0.23s		EIT STARTING
+0.45s	R1	
+1.67s	R2	
+3.17s	R3	
+4.67s	R4	
+6.18s	R5	
+7.66s	R6	
+9.17s	R7	
+10.67s	R8	
+12.17s	R9	
+13.67s	R10	
+15.16s	+Fin	
+15.16s		Finished! :)
+15.19s		H
+15.20s		Injection Finished!
