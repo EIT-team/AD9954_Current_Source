@@ -763,6 +763,67 @@ void dostuff()
 
 	break;
 
+	case 5: //start contact check
+	{
+		if (PC_inputgoodness && CS_commgoodness) // only do anything if settings are ok
+		{
+			
+			Serial.print(CS_commokmsg); // send ok msg to pc
+
+			//pulse pins different amounts so we can find them in the EEG loading
+			indChnIdent();
+
+			//reset all counters
+			iFreq = 0;
+			iPrt = 0;
+			iRep = 0;
+			iStim = 0;
+			iContact = 0;
+
+			state = 6; //move to injecting state next loop
+			FirstInj = 1; // flag that we are on the first injection
+			SwitchesProgrammed = 0; // show that switches are not set
+			ContactEndofSeq = 0; // restart contact seq
+
+			//curComplianceCheckOffset = ContactTime / 2;
+
+			//CS_AutoRangeOn(); //set ranging to normal
+
+			//CS_commgoodness = CS_sendsettings_check(ContactAmp, ContactFreq); // send settings to current source
+			CS_commgoodness = 1;
+			/* do this in the first iteration of the inject state - so the communication order the is the same!
+			if (StimMode && CS_commgoodness) // initialise stimulator trigger if we are in stim mode
+			{
+			CS_commgoodness = stim_init(Freq[iFreq]);
+			}
+			*/
+
+			if (!CS_commgoodness)
+			{
+				state = 0; // dont start injection if things are fucked
+				Serial.print(CS_commerrmsg);
+				//CS_Disp(MSG_CS_SET_ERR);
+				//CS_Disp_Wind2(MSG_CS_SET_ERR_2);
+			}
+			else
+			{
+				Serial.print(CS_commokmsg);
+				//CS_Disp(MSG_CS_SET_OK);
+				//CS_Disp_Wind2(MSG_CS_SET_OK_2);
+
+				SwitchesPwrOn(); //turn on switches
+				delay(50); // cant remember what this delay is for!
+			}
+		}
+		else // if settings are not ok then dont do anything
+		{
+			Serial.print(CS_settingserrmsg);
+			state = 0;
+			checkidle = 1;
+		}
+	}
+	break;
+
 	case 4: // initialise or "get settings" state
 	{
 		//do the CS init again
@@ -845,6 +906,106 @@ void dostuff()
 
 	}
 	break;
+	case 6: //contact check
+	{
+
+		if (!SwitchesProgrammed)
+		{
+			/*Serial.print("Channels I am about to program: ");
+			Serial.print(Injection[iPrt][0]);
+			Serial.print(" and ");
+			Serial.println(Injection[iPrt][1]);*/
+
+			SetSwitchesFixed_Contact(); // if switches havent been programmed then do that based on iPrt and take a set amount of time
+		}
+
+		if (FirstInj == 1) // if its the first time then switch straight away, otherwise check if the switch time has been met
+			//if this is the first time we are injecting we need to send settings to the current source
+		{
+
+			//start current source
+			StartTime_CS = micros();
+
+			//start current source
+			//CS_start();
+			singleTone(ContactFreq);
+			updateAD9954();
+
+			//display some stuff on the front
+			//CS_Disp(MSG_CONTANT_CHECK_START);
+			//CS_Disp_Contact(iContact, NumElec);
+
+			indpins_pulse(2, 0, 0, 0); //two pulses for indicating contact check
+			//indpins_pulse(0, 0, 3, 0); // compatible with OLD CODE ONLY
+
+
+			FirstInj = 0;
+			Switchflag = 1;
+			lastInjSwitch = micros();
+
+
+			// delay the start of injection to give the current source time to get ready
+			StartElapsed_CS = micros() - StartTime_CS;
+
+			if (StartElapsed_CS < (StartDelay_CS - 10))
+			{
+				delayMicroseconds(StartDelay_CS - StartElapsed_CS);
+			}
+
+
+
+
+		}
+		else //if its not the first time, then see if we need to switch by checking time
+		{
+			currentMicros = micros();
+			//Serial.println(currentMicros);
+			if ((currentMicros - lastInjSwitch) > (ContactTime /*- SwitchTimeFix */)) // time to switch is MeasTime, but we fixed the time taken to program switches in SetSwitchesFixed
+			{
+				Switchflag = 1; // if it is time to switch then set it to do that!
+				/*sprintf(PC_outputBuffer, "Switch: %d", currentMicros - lastInjSwitch);
+				Serial.println(PC_outputBuffer);*/
+			}
+			else if ((currentMicros - lastInjSwitch))
+			{
+				//check the compliance and do stuff based on the result
+				//The iPrt counter is incremted when switching, thus the result needs to go into iPrt-1
+
+				//Serial.println("checking compliance");
+
+				int CurrentPrt = iContact - 1;
+				if (CurrentPrt < 0) CurrentPrt = NumElec - 1;
+
+				//CompProcessSingle(CurrentPrt);
+				//CompCheckFlag = 0;
+
+			}
+
+
+
+			if (Switchflag) // if we have been told to switch
+			{
+				if (ContactEndofSeq == 1) // if we have reached the total number of injections
+				{
+					//CompProcessMulti();
+					state = 3; // do stop command
+					//for OLD CODE COMPATONLY
+					//indpins_pulse(0, 0, 5, 0);
+				}
+				else // otherwise carry on with switching etc.
+				{
+
+					SwitchChn_Contact(); // switch channel
+					//CS_Disp_Contact(iContact, NumElec);
+				}
+
+				Switchflag = 0;
+				//CompCheckFlag = 1;
+
+			}
+		}
+
+	}
 	}
 }
 
@@ -878,6 +1039,14 @@ void getCMD(char CMDIN)
 		if (state == 0) // if the system is idle ONLY
 		{
 			state = 4;
+		}
+		break;
+	}
+	case 'C': //start contact impedance check
+	{
+		if (state == 0) // if the system is idle ONLY
+		{
+			state = 5;
 		}
 		break;
 	}
