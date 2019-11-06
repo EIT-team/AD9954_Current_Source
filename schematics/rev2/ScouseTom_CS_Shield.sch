@@ -8,34 +8,34 @@
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
-<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
-<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
-<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
-<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
-<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
-<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
-<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
-<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
-<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
-<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
-<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
-<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
-<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
-<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="no"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="no"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="no"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="no"/>
-<layer number="25" name="tNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="no"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="no"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="no"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="yes" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="yes" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="yes" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="yes" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="yes" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="yes" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="yes" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="yes" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="yes" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="yes" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="yes" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="yes" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="yes" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="yes" active="no"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="no"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="no"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="no"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="no"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="no"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="no"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="no"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="no"/>
+<layer number="25" name="tNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="no"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="no"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="no"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="no"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="no"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="no"/>
@@ -44,8 +44,8 @@
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
 <layer number="35" name="tGlue" color="7" fill="4" visible="no" active="no"/>
 <layer number="36" name="bGlue" color="7" fill="5" visible="no" active="no"/>
-<layer number="37" name="tTest" color="7" fill="1" visible="no" active="no"/>
-<layer number="38" name="bTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="37" name="tTest" color="7" fill="1" visible="yes" active="no"/>
+<layer number="38" name="bTest" color="7" fill="1" visible="yes" active="no"/>
 <layer number="39" name="tKeepout" color="4" fill="11" visible="no" active="no"/>
 <layer number="40" name="bKeepout" color="1" fill="11" visible="no" active="no"/>
 <layer number="41" name="tRestrict" color="4" fill="10" visible="no" active="no"/>
@@ -53,19 +53,19 @@
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="no"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="no"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="no" active="no"/>
-<layer number="46" name="Milling" color="3" fill="1" visible="no" active="no"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="no"/>
-<layer number="48" name="Document" color="7" fill="1" visible="no" active="no"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="no" active="no"/>
-<layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="52" name="bDocu" color="7" fill="1" visible="no" active="no"/>
-<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
-<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
-<layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
-<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
-<layer number="59" name="tCarbon" color="7" fill="1" visible="no" active="no"/>
-<layer number="60" name="bCarbon" color="7" fill="1" visible="no" active="no"/>
+<layer number="46" name="Milling" color="3" fill="1" visible="yes" active="no"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="no"/>
+<layer number="48" name="Document" color="7" fill="1" visible="yes" active="no"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="no"/>
+<layer number="50" name="dxf" color="7" fill="1" visible="yes" active="no"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="no"/>
+<layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="no"/>
+<layer number="53" name="tGND_GNDA" color="7" fill="9" visible="yes" active="no"/>
+<layer number="54" name="bGND_GNDA" color="1" fill="9" visible="yes" active="no"/>
+<layer number="56" name="wert" color="7" fill="1" visible="yes" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="yes" active="no"/>
+<layer number="59" name="tCarbon" color="7" fill="1" visible="yes" active="no"/>
+<layer number="60" name="bCarbon" color="7" fill="1" visible="yes" active="no"/>
 <layer number="88" name="SimResults" color="9" fill="1" visible="no" active="yes"/>
 <layer number="89" name="SimProbes" color="9" fill="1" visible="no" active="yes"/>
 <layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
@@ -10369,75 +10369,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="LTC6900">
-<packages>
-<package name="SOT23-5L">
-<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;&lt;p&gt;
-package type OT</description>
-<wire x1="1.422" y1="0.81" x2="1.422" y2="-0.81" width="0.1524" layer="21"/>
-<wire x1="1.422" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="51"/>
-<wire x1="-1.422" y1="-0.81" x2="-1.422" y2="0.81" width="0.1524" layer="21"/>
-<wire x1="-1.422" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="51"/>
-<wire x1="-0.522" y1="0.81" x2="0.522" y2="0.81" width="0.1524" layer="21"/>
-<wire x1="-0.428" y1="-0.81" x2="-0.522" y2="-0.81" width="0.1524" layer="21"/>
-<wire x1="0.522" y1="-0.81" x2="0.428" y2="-0.81" width="0.1524" layer="21"/>
-<wire x1="-1.328" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="21"/>
-<wire x1="1.422" y1="-0.81" x2="1.328" y2="-0.81" width="0.1524" layer="21"/>
-<wire x1="1.328" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="21"/>
-<wire x1="-1.422" y1="0.81" x2="-1.328" y2="0.81" width="0.1524" layer="21"/>
-<smd name="1" x="-0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
-<smd name="2" x="0" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
-<smd name="3" x="0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
-<smd name="4" x="0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
-<smd name="5" x="-0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
-<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.905" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
-<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
-<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
-<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
-<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="LTC6906IS6PBF">
-<wire x1="-12.7" y1="10.16" x2="-12.7" y2="-15.24" width="0.4064" layer="94"/>
-<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="-15.24" x2="12.7" y2="10.16" width="0.4064" layer="94"/>
-<wire x1="12.7" y1="10.16" x2="-12.7" y2="10.16" width="0.4064" layer="94"/>
-<text x="-4.6736" y="12.7" size="2.0828" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
-<text x="-6.0706" y="-19.2786" size="2.0828" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
-<pin name="V+" x="-17.78" y="5.08" length="middle" direction="pwr"/>
-<pin name="DIV" x="-17.78" y="-5.08" length="middle" direction="in"/>
-<pin name="SET" x="-17.78" y="-2.54" length="middle" direction="in"/>
-<pin name="GND" x="-17.78" y="-10.16" length="middle" direction="pas"/>
-<pin name="OUT" x="17.78" y="5.08" length="middle" direction="out" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="LTC69000" prefix="U">
-<description>Low Power, 1kHz to 20MHz
-Resistor Set SOT-23 Oscillator</description>
-<gates>
-<gate name="A" symbol="LTC6906IS6PBF" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23-5L">
-<connects>
-<connect gate="A" pin="DIV" pad="4"/>
-<connect gate="A" pin="GND" pad="2"/>
-<connect gate="A" pin="OUT" pad="5"/>
-<connect gate="A" pin="SET" pad="3"/>
-<connect gate="A" pin="V+" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="LTC_By_element14_Batch_1">
 <description>Developed by element14 :&lt;br&gt;
 element14 CAD Library consolidation.ulp
@@ -11392,41 +11323,41 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="OPA2188AID">
-<description>&lt; 0.03V/C, 6V Vos, Low Noise, Rail-to-Rail Output, 36V Zero-Drift Operational Amplifier &lt;/b&gt;&lt;p&gt;
+<library name="OPA2188AIDGKR">
+<description>&lt;0.03V/C, 6V Vos, Low Noise, Rail-to-Rail Output, 36V Zero-Drift Operational Amplifier&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by SamacSys&lt;/author&gt;</description>
 <packages>
-<package name="SOIC127P600X175-8N">
-<description>&lt;b&gt;D (R-PDSO-G8)&lt;/b&gt;&lt;br&gt;
+<package name="SOP65P490X110-8N">
+<description>&lt;b&gt;VSSOP&lt;/b&gt;&lt;br&gt;
 </description>
-<smd name="1" x="-2.712" y="1.905" dx="1.525" dy="0.65" layer="1"/>
-<smd name="2" x="-2.712" y="0.635" dx="1.525" dy="0.65" layer="1"/>
-<smd name="3" x="-2.712" y="-0.635" dx="1.525" dy="0.65" layer="1"/>
-<smd name="4" x="-2.712" y="-1.905" dx="1.525" dy="0.65" layer="1"/>
-<smd name="5" x="2.712" y="-1.905" dx="1.525" dy="0.65" layer="1"/>
-<smd name="6" x="2.712" y="-0.635" dx="1.525" dy="0.65" layer="1"/>
-<smd name="7" x="2.712" y="0.635" dx="1.525" dy="0.65" layer="1"/>
-<smd name="8" x="2.712" y="1.905" dx="1.525" dy="0.65" layer="1"/>
+<smd name="1" x="-2.2" y="0.975" dx="1.4" dy="0.45" layer="1"/>
+<smd name="2" x="-2.2" y="0.325" dx="1.4" dy="0.45" layer="1"/>
+<smd name="3" x="-2.2" y="-0.325" dx="1.4" dy="0.45" layer="1"/>
+<smd name="4" x="-2.2" y="-0.975" dx="1.4" dy="0.45" layer="1"/>
+<smd name="5" x="2.2" y="-0.975" dx="1.4" dy="0.45" layer="1"/>
+<smd name="6" x="2.2" y="-0.325" dx="1.4" dy="0.45" layer="1"/>
+<smd name="7" x="2.2" y="0.325" dx="1.4" dy="0.45" layer="1"/>
+<smd name="8" x="2.2" y="0.975" dx="1.4" dy="0.45" layer="1"/>
 <text x="0" y="0" size="1.27" layer="25" align="center">&gt;NAME</text>
 <text x="0" y="0" size="1.27" layer="27" align="center">&gt;VALUE</text>
-<wire x1="-3.725" y1="2.75" x2="3.725" y2="2.75" width="0.05" layer="51"/>
-<wire x1="3.725" y1="2.75" x2="3.725" y2="-2.75" width="0.05" layer="51"/>
-<wire x1="3.725" y1="-2.75" x2="-3.725" y2="-2.75" width="0.05" layer="51"/>
-<wire x1="-3.725" y1="-2.75" x2="-3.725" y2="2.75" width="0.05" layer="51"/>
-<wire x1="-1.95" y1="2.45" x2="1.95" y2="2.45" width="0.1" layer="51"/>
-<wire x1="1.95" y1="2.45" x2="1.95" y2="-2.45" width="0.1" layer="51"/>
-<wire x1="1.95" y1="-2.45" x2="-1.95" y2="-2.45" width="0.1" layer="51"/>
-<wire x1="-1.95" y1="-2.45" x2="-1.95" y2="2.45" width="0.1" layer="51"/>
-<wire x1="-1.95" y1="1.18" x2="-0.68" y2="2.45" width="0.1" layer="51"/>
-<wire x1="-1.6" y1="2.45" x2="1.6" y2="2.45" width="0.2" layer="21"/>
-<wire x1="1.6" y1="2.45" x2="1.6" y2="-2.45" width="0.2" layer="21"/>
-<wire x1="1.6" y1="-2.45" x2="-1.6" y2="-2.45" width="0.2" layer="21"/>
-<wire x1="-1.6" y1="-2.45" x2="-1.6" y2="2.45" width="0.2" layer="21"/>
-<wire x1="-3.475" y1="2.58" x2="-1.95" y2="2.58" width="0.2" layer="21"/>
+<wire x1="-3.15" y1="1.8" x2="3.15" y2="1.8" width="0.05" layer="51"/>
+<wire x1="3.15" y1="1.8" x2="3.15" y2="-1.8" width="0.05" layer="51"/>
+<wire x1="3.15" y1="-1.8" x2="-3.15" y2="-1.8" width="0.05" layer="51"/>
+<wire x1="-3.15" y1="-1.8" x2="-3.15" y2="1.8" width="0.05" layer="51"/>
+<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.1" layer="51"/>
+<wire x1="-1.5" y1="0.85" x2="-0.85" y2="1.5" width="0.1" layer="51"/>
+<wire x1="-1.15" y1="1.5" x2="1.15" y2="1.5" width="0.2" layer="21"/>
+<wire x1="1.15" y1="1.5" x2="1.15" y2="-1.5" width="0.2" layer="21"/>
+<wire x1="1.15" y1="-1.5" x2="-1.15" y2="-1.5" width="0.2" layer="21"/>
+<wire x1="-1.15" y1="-1.5" x2="-1.15" y2="1.5" width="0.2" layer="21"/>
+<wire x1="-2.9" y1="1.55" x2="-1.5" y2="1.55" width="0.2" layer="21"/>
 </package>
 </packages>
 <symbols>
-<symbol name="OPA2188AID">
+<symbol name="OPA2188AIDGKR">
 <wire x1="5.08" y1="2.54" x2="25.4" y2="2.54" width="0.254" layer="94"/>
 <wire x1="25.4" y1="-10.16" x2="25.4" y2="2.54" width="0.254" layer="94"/>
 <wire x1="25.4" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
@@ -11444,14 +11375,14 @@ Source: http://www.murata.com/ Ferrite Bead BLM15H.pdf</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="OPA2188AID" prefix="IC">
-<description>&lt;b&gt; 0.03V/C, 6V Vos, Low Noise, Rail-to-Rail Output, 36V Zero-Drift Operational Amplifier &lt;/b&gt;&lt;p&gt;
-Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet &lt;/a&gt;</description>
+<deviceset name="OPA2188AIDGKR" prefix="IC">
+<description>&lt;b&gt;0.03V/C, 6V Vos, Low Noise, Rail-to-Rail Output, 36V Zero-Drift Operational Amplifier&lt;/b&gt;&lt;p&gt;
+Source: &lt;a href="http://www.ti.com/lit/gpn/opa2188"&gt; Datasheet &lt;/a&gt;</description>
 <gates>
-<gate name="G$1" symbol="OPA2188AID" x="0" y="0"/>
+<gate name="G$1" symbol="OPA2188AIDGKR" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="SOIC127P600X175-8N">
+<device name="" package="SOP65P490X110-8N">
 <connects>
 <connect gate="G$1" pin="+IN_A" pad="3"/>
 <connect gate="G$1" pin="+IN_B" pad="5"/>
@@ -11464,15 +11395,86 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DESCRIPTION" value=" 0.03V/C, 6V Vos, Low Noise, Rail-to-Rail Output, 36V Zero-Drift Operational Amplifier " constant="no"/>
-<attribute name="HEIGHT" value="1.75mm" constant="no"/>
+<attribute name="DESCRIPTION" value="0.03V/C, 6V Vos, Low Noise, Rail-to-Rail Output, 36V Zero-Drift Operational Amplifier" constant="no"/>
+<attribute name="HEIGHT" value="1.1mm" constant="no"/>
 <attribute name="MANUFACTURER_NAME" value="Texas Instruments" constant="no"/>
-<attribute name="MANUFACTURER_PART_NUMBER" value="OPA2188AID" constant="no"/>
-<attribute name="MOUSER_PART_NUMBER" value="595-OPA2188AID" constant="no"/>
-<attribute name="MOUSER_PRICE-STOCK" value="https://www.mouser.com/Search/Refine.aspx?Keyword=595-OPA2188AID" constant="no"/>
-<attribute name="RS_PART_NUMBER" value="9212845" constant="no"/>
-<attribute name="RS_PRICE-STOCK" value="http://uk.rs-online.com/web/p/products/9212845" constant="no"/>
+<attribute name="MANUFACTURER_PART_NUMBER" value="OPA2188AIDGKR" constant="no"/>
+<attribute name="MOUSER_PART_NUMBER" value="" constant="no"/>
+<attribute name="MOUSER_PRICE-STOCK" value="" constant="no"/>
+<attribute name="RS_PART_NUMBER" value="" constant="no"/>
+<attribute name="RS_PRICE-STOCK" value="" constant="no"/>
 </technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="Low.Noise.Current.Source">
+<description>Generated from &lt;b&gt;Low.Noise.Current.Source.sch&lt;/b&gt;&lt;p&gt;
+by exp-lbrs.ulp</description>
+<packages>
+<package name="LTC6900_SOT23-5L">
+<description>&lt;b&gt;Small Outline Transistor&lt;/b&gt;&lt;p&gt;
+package type OT</description>
+<wire x1="1.422" y1="0.81" x2="1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.81" x2="-1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="51"/>
+<wire x1="-0.522" y1="0.81" x2="0.522" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-0.428" y1="-0.81" x2="-0.522" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="0.522" y1="-0.81" x2="0.428" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="-1.328" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="1.328" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.328" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="-1.328" y2="0.81" width="0.1524" layer="21"/>
+<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
+<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
+<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
+<smd name="1" x="-0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="2" x="0" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="3" x="0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="4" x="0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="5" x="-0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LTC6900_LTC6906IS6PBF">
+<wire x1="-12.7" y1="10.16" x2="-12.7" y2="-15.24" width="0.4064" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="12.7" y2="-15.24" width="0.4064" layer="94"/>
+<wire x1="12.7" y1="-15.24" x2="12.7" y2="10.16" width="0.4064" layer="94"/>
+<wire x1="12.7" y1="10.16" x2="-12.7" y2="10.16" width="0.4064" layer="94"/>
+<pin name="DIV" x="-17.78" y="-5.08" length="middle" direction="in"/>
+<pin name="GND" x="-17.78" y="-10.16" length="middle" direction="pas"/>
+<pin name="OUT" x="17.78" y="5.08" length="middle" direction="out" rot="R180"/>
+<pin name="SET" x="-17.78" y="-2.54" length="middle" direction="in"/>
+<pin name="V+" x="-17.78" y="5.08" length="middle" direction="pwr"/>
+<text x="-4.6736" y="12.7" size="2.0828" layer="95" ratio="10" rot="SR0">&gt;NAME</text>
+<text x="-6.0706" y="-19.2786" size="2.0828" layer="96" ratio="10" rot="SR0">&gt;VALUE</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LTC6900_LTC69000" prefix="U">
+<description>Low Power, 1kHz to 20MHz
+Resistor Set SOT-23 Oscillator</description>
+<gates>
+<gate name="A" symbol="LTC6900_LTC6906IS6PBF" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LTC6900_SOT23-5L">
+<connects>
+<connect gate="A" pin="DIV" pad="4"/>
+<connect gate="A" pin="GND" pad="2"/>
+<connect gate="A" pin="OUT" pad="5"/>
+<connect gate="A" pin="SET" pad="3"/>
+<connect gate="A" pin="V+" pad="1"/>
+</connects>
+<technologies>
+<technology name=""/>
 </technologies>
 </device>
 </devices>
@@ -11493,24 +11495,24 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 <part name="JP5" library="pinhead" deviceset="PINHD-2X5" device="" value="IND_BK"/>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
-<part name="C13" library="resistor" deviceset="C-EU" device="C0805" value=".1uF"/>
-<part name="C15" library="resistor" deviceset="C-EU" device="C0805" value="10uF"/>
-<part name="C24" library="resistor" deviceset="C-EU" device="C0805" value="10uF"/>
-<part name="C25" library="resistor" deviceset="C-EU" device="C0805" value=".1uF"/>
+<part name="C13" library="resistor" deviceset="C-EU" device="C0603" value=".1uF"/>
+<part name="C15" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
+<part name="C24" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
+<part name="C25" library="resistor" deviceset="C-EU" device="C0603" value=".1uF"/>
 <part name="P+4" library="supply1" deviceset="+5V" device=""/>
 <part name="GND11" library="supply1" deviceset="GND" device=""/>
-<part name="C16" library="resistor" deviceset="C-EU" device="C0805" value=".1uF"/>
-<part name="C17" library="resistor" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C16" library="resistor" deviceset="C-EU" device="C0603" value=".1uF"/>
+<part name="C17" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
-<part name="C19" library="resistor" deviceset="C-EU" device="C0805" value=".1uF"/>
-<part name="C20" library="resistor" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C19" library="resistor" deviceset="C-EU" device="C0603" value=".1uF"/>
+<part name="C20" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
 <part name="P+5" library="supply1" deviceset="+5V" device=""/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
-<part name="C29" library="resistor" deviceset="C-EU" device="C0805" value=".1uF"/>
-<part name="C30" library="resistor" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C29" library="resistor" deviceset="C-EU" device="C0603" value=".1uF"/>
+<part name="C30" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
 <part name="GND21" library="supply1" deviceset="GND" device=""/>
-<part name="C32" library="resistor" deviceset="C-EU" device="C0805" value=".1uF"/>
-<part name="C33" library="resistor" deviceset="C-EU" device="C0805" value="10uF"/>
+<part name="C32" library="resistor" deviceset="C-EU" device="C0603" value=".1uF"/>
+<part name="C33" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="DSUB2" library="DSUBJAMES" deviceset="DSUB9RA" device="" value="SW DSUB"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
@@ -11596,7 +11598,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 <part name="C47" library="resistor" deviceset="C-EU" device="C0603" value="10uF"/>
 <part name="C48" library="resistor" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="GND32" library="supply1" deviceset="GND" device=""/>
-<part name="U2" library="LTC6900" deviceset="LTC69000" device=""/>
+<part name="U2" library="Low.Noise.Current.Source" deviceset="LTC6900_LTC69000" device=""/>
 <part name="C49" library="resistor" deviceset="C-EU" device="C0603" value="0.1uF"/>
 <part name="R3" library="adafruit" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="U6" library="LTC_By_element14_Batch_1" deviceset="LTC1044CS8PBF" device=""/>
@@ -11634,7 +11636,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 <part name="L1" library="inductors" deviceset="BLM15H" device="" technology="D182SN1"/>
 <part name="L2" library="inductors" deviceset="BLM15H" device="" technology="D182SN1"/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="R0805" value="0"/>
-<part name="IC3" library="OPA2188AID" deviceset="OPA2188AID" device=""/>
+<part name="IC3" library="OPA2188AIDGKR" deviceset="OPA2188AIDGKR" device=""/>
 <part name="U$2" library="arduino_due_shield" deviceset="ARDUINO_DUE_SHIELD_NODEBUG_ANALOG_DIGI" device=""/>
 <part name="GND10" library="testpad" deviceset="PTR1" device="PAD1-13"/>
 <part name="JP2" library="pinhead" deviceset="PINHD-1X2" device=""/>
@@ -12862,9 +12864,9 @@ To calculate DAC output network</text>
 <text x="401.32" y="99.06" size="1.778" layer="91">Set output current by connecting jumper
 to appropriate resistor:
 
-2k: 500uA
-5k: 200uA
-10k: 100uA</text>
+2k: 250uA
+5k: 100uA
+10k: 50uA</text>
 <text x="434.34" y="142.24" size="1.778" layer="91">To Load</text>
 <text x="292.1" y="96.52" size="1.778" layer="91">Improved Howland Current Pump
 used for current output stage</text>
@@ -12881,6 +12883,8 @@ used for current output stage</text>
 <wire x1="305.816" y1="135.89" x2="307.34" y2="135.89" width="0.2032" layer="97"/>
 <wire x1="306.578" y1="136.906" x2="306.578" y2="135.128" width="0.2032" layer="97"/>
 <text x="335.28" y="195.58" size="1.27" layer="97">Actual connectios to OP AMP</text>
+<text x="378.46" y="109.22" size="1.778" layer="91">Iout=Vin/RG</text>
+<text x="370.84" y="101.6" size="1.778" layer="91">Vin is 0.5V from DAC</text>
 </plain>
 <instances>
 <instance part="U1" gate="A" x="104.14" y="129.54"/>
