@@ -1,8 +1,17 @@
+// 
+// 
+// 
+
+#include "Switches.h"
+#include "PCBPinsRev2.h"
+#include "digitalDirect.h"
+#include "Settings.h"
+
 
 //function to program switches
 void programswitches(int sourcechn, int sinkchn, int maxpins)
 {
-	
+
 	//current on due this takes 220 us - could be sped up significantly but digitalwritedirect was too fast for optocouplers/switches
 	//Set SYNC low to enable programming of switches
 	digitalWrite(SYNC, LOW);
@@ -25,7 +34,6 @@ void programswitches(int sourcechn, int sinkchn, int maxpins)
 
 void SwitchesPwrOn()
 {
-	
 	digitalWrite(RESET, HIGH);
 	digitalWrite(SYNC, HIGH);
 	digitalWrite(SYNC, LOW);
@@ -37,7 +45,4 @@ void SwitchesPwrOn()
 void SwitchesPwrOff()
 {
 	digitalWrite(RESET, LOW); // reset is probably quicker than just turning power off 
-	//digitalWriteDirect(RESET, HIGH); // 
-//	digitalWriteDirect(PWR_SWITCH, LOW); //turn off power
-	reset_pins(); // set all pins to starting state
 }

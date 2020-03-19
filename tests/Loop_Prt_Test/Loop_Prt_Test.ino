@@ -12,8 +12,8 @@ Jimmy 2014/2015
 */
 
 //#include "BreadboardPins.h" // Pins for breadboard version - used by kirill and me (testing)
-#include "PCBPins.h" // Pins for PCB version - these have been altered to more logical layout for PCB
-
+//#include "PCBPins.h" // Pins for PCB version - these have been altered to more logical layout for PCB
+#include "PCBPinsrev2.h"
 
 int sinkpin = 1; // pin that the sink is connected to
 int sourcepin = 4;

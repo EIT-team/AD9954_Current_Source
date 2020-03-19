@@ -11773,7 +11773,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 <instance part="GND40" gate="1" x="17.78" y="0"/>
 <instance part="P+6" gate="1" x="60.96" y="-2.54" rot="R180"/>
 <instance part="P+7" gate="1" x="111.76" y="-2.54" rot="R180"/>
-<instance part="GND41" gate="1" x="101.6" y="132.08" rot="R180"/>
+<instance part="GND41" gate="1" x="104.14" y="132.08" rot="R180"/>
 <instance part="U$2" gate="G$1" x="7.62" y="5.08"/>
 </instances>
 <busses>
@@ -11793,7 +11793,7 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 </segment>
 <segment>
 <pinref part="GND41" gate="1" pin="GND"/>
-<wire x1="101.6" y1="124.46" x2="101.6" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="124.46" x2="104.14" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -11865,23 +11865,28 @@ Source: &lt;a href="http://www.ti.com/lit/ds/symlink/opa2188.pdf"&gt; Datasheet 
 </net>
 <net name="SDO" class="0">
 <segment>
-<label x="88.9" y="129.54" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="91.44" y1="124.46" x2="91.44" y2="127" width="0.1524" layer="91"/>
+<label x="91.44" y="127" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="5V_SPI"/>
+<junction x="91.44" y="124.46"/>
+<wire x1="91.44" y1="124.46" x2="88.9" y2="124.46" width="0.1524" layer="91"/>
 <pinref part="U$2" gate="G$1" pin="MISO"/>
-<wire x1="88.9" y1="124.46" x2="88.9" y2="129.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCLK" class="0">
 <segment>
-<label x="93.98" y="134.62" size="1.27" layer="95" rot="R90" xref="yes"/>
-<pinref part="U$2" gate="G$1" pin="SPCK"/>
-<wire x1="93.98" y1="134.62" x2="93.98" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="124.46" x2="96.52" y2="127" width="0.1524" layer="91"/>
+<label x="96.52" y="127" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="MOSI"/>
+<junction x="96.52" y="124.46"/>
 </segment>
 </net>
 <net name="SDIO" class="0">
 <segment>
-<label x="96.52" y="129.54" size="1.27" layer="95" rot="R90" xref="yes"/>
-<wire x1="96.52" y1="124.46" x2="96.52" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="MOSI"/>
+<wire x1="99.06" y1="124.46" x2="99.06" y2="129.54" width="0.1524" layer="91"/>
+<label x="99.06" y="129.54" size="1.27" layer="95" rot="R90" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="MASTER_R_SPI"/>
+<junction x="99.06" y="124.46"/>
 </segment>
 </net>
 <net name="RESET" class="0">

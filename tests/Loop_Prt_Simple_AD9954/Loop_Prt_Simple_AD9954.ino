@@ -15,12 +15,25 @@ int CS_Freq = 1000;
 #include <SPI.h>
 #include "AD9954.h"
 
+/*
 #define SS_PIN 8
 #define RESET_PIN 12
 #define UPDATE_PIN 9
 #define PS0 11
 #define PS1 10
 #define OSK 15
+#define CLOCK 10e6
+*/
+
+
+#define SS_PIN 17
+#define RESET_PIN 21
+#define UPDATE_PIN 18
+#define PS0 20
+#define PS1 19
+#define OSK 27
+#define CLOCK 20e6
+
 
 // Register Commands
 #define SET_SDIO 0x02
@@ -30,7 +43,9 @@ int CS_Freq = 1000;
 #define CFR2_READ 0x81
 #define FREQ_WRITE 0x04
 
-#define CLOCK 10e6
+
+
+
 #define MAX_FREQ 4294967296
 
 void resetAD9954() {
@@ -47,7 +62,7 @@ void resetAD9954() {
  * 
  * 
  */
-#include "PCBPinsRev1.h" // Pins to use the Rev 1 shield - Indicator pins are same as some used on CS board
+#include "PCBPinsRev2.h" // Pins to use the Rev 1 shield - Indicator pins are same as some used on CS board
 
 
 int sinkpin = 1; // pin that the sink is connected to
@@ -98,6 +113,8 @@ void setup() {
   resetAD9954();
 
   Serial.println("Starting up and getting going");
+  delay(1000);
+  
   singleTone(CS_Freq);
   updateAD9954();
 
