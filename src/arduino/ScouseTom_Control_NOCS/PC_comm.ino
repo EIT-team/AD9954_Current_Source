@@ -252,6 +252,8 @@ int PC_getsettings()
 			//get sinks
 			for (int n = 0; n < NumInj; n++)
 			{
+				for (int m = 0; m < NumShunt; m++)
+  				{
 				tmp_in = getasciinum();
 				sendasciinum(tmp_in);
 				if (tmp_in == -1)
@@ -260,7 +262,8 @@ int PC_getsettings()
 					commgoodness = 0;
 					break;
 				}
-				Injection[n][1] = tmp_in;
+				Injection[n][m+1] = tmp_in;
+				}
 			}
 			if (tmp_in == -1)
 			{

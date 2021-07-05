@@ -263,9 +263,22 @@ end
 %% timing and protocol ones
 
 if size(ExpSetup.Protocol,2) ~= 2
-    warning('Weird protocol vector');
-    goodnessflag=0;
-    return
+        yesresp='YES! ';
+        noresp= 'NO!';
+        titlestr='We are in 12x shunting mode!!';
+        promptstr='You want to be shunting right?';
+        resp=questdlg(promptstr,titlestr,yesresp,noresp,yesresp);
+        
+        if isempty(resp) %if user quits dialogue then save in default
+            warning('User didnt specify, gonna assume you want to shunt');
+        end
+        
+        if strcmp(resp,yesresp) == 1
+           
+        else
+            goodnessflag = 0;
+            return
+        end
 end
 
 if max(max(ExpSetup.Protocol)) > ExpSetup.Elec_num
@@ -554,11 +567,13 @@ end
 %update the number of lines in protocol - this is different after
 %adjustment for bad elecs
 N_prt = size(ExpSetup.Protocol,1);
+N_shunt = size(ExpSetup.Protocol,2) -1; % assuming Source then N Sinks shunted together
 
 %user can edit ExpSetup on the Fly, so make sure ExpSetup.Info relates to
 %the ExpSetup as it ACTUALLY IS
 
 ExpSetup.Info.ProtocolLength=N_prt;
+ExpSetup.Info.Shunt = N_shunt;
 ExpSetup.Info.FreqNum=N_freq;
 ExpSetup.Info.ProtocolTime=sum(N_prt*(ExpSetup.MeasurementTime/1000)); %time in seconds for one complete protocol
 ExpSetup.Info.TotalTime=ExpSetup.Repeats*ExpSetup.Info.ProtocolTime;
@@ -610,7 +625,12 @@ if VerboseFlag
     
     for i =1:N_prt
         
-        fprintf('%d\t\t%d\n',ExpSetup.Protocol(i,1),ExpSetup.Protocol(i,2));
+        fprintf('%d\t\t',ExpSetup.Protocol(i,1));
+        for j = 1:N_shunt
+        fprintf('%d ',ExpSetup.Protocol(i,j+1));
+        end
+        fprintf('\n');
+        
     end
     fprintf('--------------\n');
     fprintf('Number of repeats : %d \n',ExpSetup.Repeats);

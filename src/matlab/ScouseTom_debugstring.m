@@ -4,6 +4,8 @@ function [ dbstring ] = ScouseTom_debugstring( ExpSetup )
 %useful for debuging in the Serial montior of Arduino or Termite
 % Send command 'I' followed by 'A' followed by these lines
 
+NumShunt=12; % number of SINKS which will be shunted together
+
 dbstring='';
 
 dbstring=[dbstring sprintf('<%d>',ExpSetup.Info.ProtocolLength)];
@@ -23,7 +25,9 @@ for nn=1:ExpSetup.Info.ProtocolLength
     dbstring=[dbstring sprintf('<%d>',ExpSetup.Info.Protocol_Sent(nn,1))];
 end
 for nn=1:ExpSetup.Info.ProtocolLength
-    dbstring=[dbstring sprintf('<%d>',ExpSetup.Info.Protocol_Sent(nn,2))];
+    for mm=1:NumShunt
+        dbstring=[dbstring sprintf('<%d>',ExpSetup.Info.Protocol_Sent(nn,2+(mm-1)))];
+    end
 end
 
 for nn=1:ExpSetup.Info.FreqNum
